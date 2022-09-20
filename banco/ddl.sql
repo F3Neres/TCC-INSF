@@ -38,13 +38,13 @@ create table tb_servico(
     ds_descricao			varchar(1000),
     nr_valor				decimal(15, 2),
     ds_img					varchar(300),
-    foreign key (id_categoria) references tb_categoria(id_categoria)
+foreign key (id_categoria)  references tb_categoria(id_categoria)
 );
 
 create table tb_servico_item(
 	id_servico_item			int primary key auto_increment,
     id_servico				int,
-    foreign key (id_servico) references tb_servico(id_servico)
+foreign key (id_servico)    references tb_servico(id_servico)
 );
 
 create table tb_agenda(
@@ -60,9 +60,9 @@ create table tb_pedido(
     id_agenda				int,
     tb_pagamento			varchar(100),
     ds_status				varchar(100),
-    foreign key (id_usuario) references tb_usuario(id_usuario),
-    foreign key (id_servico_item) references tb_servico_item(id_servico_item),
-    foreign key (id_agenda) references tb_agenda(id_agenda)
+foreign key (id_usuario) references tb_usuario(id_usuario),
+foreign key (id_servico_item) references tb_servico_item(id_servico_item),
+foreign key (id_agenda) references tb_agenda(id_agenda)
 );
 
 create table tb_pagamento_cartao(
