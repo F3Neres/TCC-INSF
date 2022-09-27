@@ -1,0 +1,91 @@
+
+(1) 
+/POST       /usuario/login
+
+request
+{
+    "email": "",
+    "senha": ""
+}
+
+respose
+{
+    "id": 0,
+    "email": "",
+    "nome": ""
+}
+
+
+------------------------------------------
+(2)
+/POST       /categoria
+
+request
+{
+    "nome": "",
+    "descricao": ""
+}
+
+respose
+{
+    "id": 1,
+    "nome": "",
+    "descricao": ""
+}
+
+------------------------------------------
+(2.1)
+/PUT       /categoria/:id/imagem
+
+request
+{
+    "imagem": "",
+}
+
+respose (204)
+--sem conteudo
+
+
+------------------------------------------
+(3)
+/POST       /servico
+
+request
+{   
+    "categoria": 1,
+    "nome": "",
+    "descricao": "",
+    "valor": "10.0"
+}
+
+respose
+{
+    "id": 1,
+    "nome": "",
+    "descricao": "",
+    "valor": "10.0",
+}
+
+------------------------------------------
+(3.1)
+/PUT       /servico/:id/imagem
+
+request
+{
+    "imagem": ""
+}
+
+respose(204)
+--sem conteudo
+
+
+------------------------------------------
+(4)
+/GET        /categoria
+
+respose (200)
+[
+    {
+
+    }
+]

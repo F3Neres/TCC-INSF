@@ -87,6 +87,23 @@
         align-items: center;
     }
 
+    .img{
+        display: flex;
+        margin-top: 2em;
+        align-self: center;
+        background-color: #fff;
+        width: 25vh;
+        height: 20vh;
+        justify-content: center;
+    }
+
+    .caixa-img{
+        display: flex;
+        align-self: center;
+        justify-content: center;
+        opacity: 50%;
+    }
+
     img{
         margin-top: 2em;
         align-self: center;
@@ -94,6 +111,13 @@
         width: 25vh;
         height: 20vh;
     }
+    
+    button:active{
+        color: #fff;
+        background-color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
 
     button{
         color: #fff;

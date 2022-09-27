@@ -1,8 +1,36 @@
-import './index.scss'
 import '../../common/index.scss'
+import './index.scss'
+
+import { cadastrarCategoria, imagemCategoria } from '../../../api/cadastrarCategoria'
+
+import storage from "local-storage"
+import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function Index() {
+
+    const [nome, setNome] = useState('');
+    const [descricao, setDescricao] = useState('');
+    const [imagem, setImagem] = useState('');
+
+    async function salvarCLick(){
+        try {
+            const r = await cadastrarCategoria(nome, descricao)
+
+            alert('Categoria cadastrada');
+        } catch (err) {
+            alert(err.message);
+        }
+
+    }
+
+    
+
+    // useEffect(() => {
+    //     const usuarioLogado = storage('usuario-logado');
+    //     setUsuario(usuarioLogado.nome)
+    // }, [])
 
     return(
 
@@ -10,8 +38,9 @@ export default function Index() {
 
             <div className='esquerda'>
 
-                <h3>Nome adm</h3>
+                <h3>Milena</h3>
                 <hr/>
+                <Link class="links" to="/servico"> Serviço </Link>
             
             </div>
 
@@ -26,12 +55,12 @@ export default function Index() {
                     <div className='caixas'>
                         <div className='nome'>
                             <h2>Nome: </h2>
-                            <input type = "text"/>
+                            <input type = "text" value={nome} onChange={e => setNome(e.target.value)}/>
                         </div>
 
                         <div className='descricao'>
                             <h2>Descrição:</h2>
-                            <textarea/>
+                            <textarea value={descricao} onChange={e => setDescricao(e.target.value)}/>
                         </div>
 
                     </div>
@@ -40,10 +69,10 @@ export default function Index() {
 
                         <div className='imagem'>
                             <h2>Imagem</h2>
-                            <div> <img/> </div>
+                            <div className = 'img'>   <input className= 'caixa-img' type = "image"/> </div>
                         </div>
 
-                        <button>CADASTRAR CATEGORIA</button>
+                        <button onClick={salvarCLick}>CADASTRAR CATEGORIA</button>
 
                     </div>
                 

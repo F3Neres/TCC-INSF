@@ -27,7 +27,7 @@ create table tb_login_usuario(
 create table tb_categoria(
 	id_categoria			int primary key auto_increment,
     nm_categoria			varchar(200),
-    ds_img					varchar(300),
+    img_categoria				varchar(300),
     ds_descricao			varchar(1000)
 );
 
@@ -37,7 +37,7 @@ create table tb_servico(
     nm_servico				varchar(200),
     ds_descricao			varchar(1000),
     nr_valor				decimal(15, 2),
-    ds_img					varchar(300),
+    img_servico				varchar(300),
 foreign key (id_categoria)  references tb_categoria(id_categoria)
 );
 

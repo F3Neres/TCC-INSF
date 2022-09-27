@@ -9,3 +9,13 @@ a, a:link, a:visited a:active{
     display: inline-block;
     color: inherit;
 }
+
+button:hover{
+    background-color: rgb(150, 150, 150);
+    cursor: pointer;
+}
+button:active{
+    color: #fff;
+    background-color: rgb(36, 36, 36);
+    cursor: pointer;
+}
