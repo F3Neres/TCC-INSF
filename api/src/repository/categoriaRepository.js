@@ -12,7 +12,6 @@ export async function inserirCategoria(categoria) {
     return categoria;
 }
 
-
 export async function imagemCategoria(imagem, id){
     const comando = 
     `UPDATE tb_categoria
@@ -21,7 +20,7 @@ export async function imagemCategoria(imagem, id){
 
       const [resposta] = await con.query(comando, [imagem, id]);
       return resposta.affectedRows
-}
+};
 
 export async function listarCategoria () {
     const comando = 
@@ -31,4 +30,4 @@ export async function listarCategoria () {
 
     const [linhas] =await con.query(comando);
     return linhas
-}
+};

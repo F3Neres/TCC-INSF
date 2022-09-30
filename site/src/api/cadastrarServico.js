@@ -4,9 +4,9 @@ const api = axios.create({
 })
 
 
-export async function cadastrarServico(categoria, nome, descricao, valor) {
+export async function cadastrarServico(idCategoria, nome, descricao, valor) {
     const resposta = await api.post('/servico', {
-        categoria: categoria,
+        categoria: idCategoria,
         nome: nome,
         descricao: descricao,
         valor: valor

@@ -10,46 +10,50 @@ import { Link } from 'react-router-dom'
 
 export default function Index() {
 
-    const [idCategoria, setIdCategoria] = useState();
-    const [categorias, setCategorias] = useState([]);
-
-
     const [nome, setNome] = useState('');
     const [descricao, setDescricao] = useState('');
     const [imagem, setImagem] = useState('');
     const [valor, setValor] = useState(0);
 
-    const [catSelecionadas, setCatSelecionadas] = useState([]);
+    const [idCategoria, setIdCategoria] = useState();
+    const [categoria, setCategoria] = useState([]);
 
-    async function salvarCLick(){
+    const NovoServico = _=>{
+        setNome('');
+        setDescricao('');
+        setValor('');
+    }
+
+    const Categoria = async () =>{
+        const r = await listarCategoria();
+        setCategoria(r);
+    }
+
+    const Salvar =  async () => {
         try {
-            const r = await cadastrarServico(categorias, nome, descricao, valor);
 
-            alert('Serviço cadastrada');
+            const r = await cadastrarServico(idCategoria, nome, descricao, valor);
+
+            NovoServico();
+
         } catch (err) {
             alert(err.message);
-        }
+        };
+    };
 
+    
+    useEffect(()=>{
+        Categoria();
+    },  []);
+
+    
+    const uploadImage = async e => {
+
+        e.preventDefault();
+
+        const formData = new FormData();
+        formData.append('imagem', imagem);
     }
-    function buscarNomeCategoria(id) {
-        const cat = categorias.find(item => item.id == id);
-        return cat.categoria;
-    }
-    function adicionarCategoria() {
-        if (!catSelecionadas.find(item => item == idCategoria)) {
-            const categorias = [...catSelecionadas, idCategoria];
-            setCatSelecionadas(categorias);
-        }
-    }
-
-
-
-    async function listar() {
-        const resposta = await listarCategoria();
-        setCategorias(resposta);
-    }
-
-
 
 
     return(
@@ -60,7 +64,7 @@ export default function Index() {
 
                 <h3>Milena</h3>
                 <hr/>
-                <Link class="links" to="/categoria"> Categoria </Link>
+                <Link className="links" to="/categoria"> Categoria </Link>
 
             
             </div>
@@ -81,16 +85,14 @@ export default function Index() {
 
                         <div className='valor'>
                             <h2 className='h2-valor'>Valor: </h2>
-                            <input type = "text" value={valor} onChange={e => setValor(e.target.value)}/>
+                            <input type = "number" value={valor} onChange={e => setValor(e.target.value)}/>
                         </div>
 
-                        <select value={idCategoria} onChange={e => setIdCategoria(e.target.value)} >
-                            <option selected disabled hidden>Selecione</option>
+                        <select value={idCategoria} onChange={e => setIdCategoria(e.target.value)}>
+                                            <option value="Selecione">Selecione</option>
+                                            {categoria.map(item =><option key={item.id} value={item.id}> {item.categoria}</option>)}
+                                        </select>
 
-                            {categorias.map(item =>
-                                <option value={item.id}> {item.categoria} </option>
-                            )}
-                        </select>
 
                         <div className='descricao'>
                             <h2>Descrição:</h2>
@@ -106,7 +108,7 @@ export default function Index() {
                             <div className = 'img'>   <input className= 'caixa-img' type = "image"/> </div>
                         </div>
 
-                        <button onClick={salvarCLick}>CADASTRAR SERVIÇO</button>
+                        <button onClick={Salvar}>CADASTRAR SERVIÇO</button>
 
                     </div>
                 
