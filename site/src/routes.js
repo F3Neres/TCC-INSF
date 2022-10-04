@@ -11,8 +11,8 @@ export const Rotas = () =>{
     return(
         <BrowserRouter>
             <Routes>
-                <Route path = '/' element={<Home />} />
-                <Route path = '/login' element={<LoginAdm />} />
+                <Route path = '/home' element={<Home />} />
+                <Route path = '/' element={<LoginAdm />} />
                 <Route path = '/categoria' element={<Categoria />} />
                 <Route path = '/servico' element={<Servico />} />
                 <Route path = '/consultar' element={<Consultar />} />
