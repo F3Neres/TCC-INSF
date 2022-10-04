@@ -10,3 +10,4 @@ const con = await mysql.createConnection({
 console.log('DB conectado!')
 
 export { con }
+

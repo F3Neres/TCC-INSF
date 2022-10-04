@@ -1,5 +1,5 @@
 
-import { imagemServico, inserirServico } from "../repository/servicoRepository.js";
+import { imagemServico, inserirServico, listarServico, removerServico } from "../repository/servicoRepository.js";
 
 import multer from 'multer'
 
@@ -47,6 +47,34 @@ server.put('/servico/:id/imagem', upload.single('capa'), async (req, resp) => {
         }
 
         resp.status(204).send();
+
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+
+server.get('/listarServico', async (req, resp) => {
+    try {
+        const resposta = await listarServico();
+        resp.send(resposta);
+        
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+server.delete('/removerServico/:id', async (req, resp)=> {
+    try {
+        const id =  req.params.id;
+
+        await removerServico(id);
+
+        resp.status(200).send();
 
     } catch (err) {
         resp.status(400).send({

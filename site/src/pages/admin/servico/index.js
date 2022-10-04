@@ -36,6 +36,8 @@ export default function Index() {
 
             NovoServico();
 
+            alert('Serviço cadastrado');
+
         } catch (err) {
             alert(err.message);
         };
