@@ -64,7 +64,10 @@ export default function Index() {
 
                 <h3>Milena</h3>
                 <hr/>
-                <Link className="links" to="/categoria"> Categoria </Link>
+                <Link class="links" to="/categoria"> Categoria </Link>
+                <hr/>
+                <Link class="links" to="/consultar"> Consultar </Link>
+                <hr/>
 
             
             </div>
