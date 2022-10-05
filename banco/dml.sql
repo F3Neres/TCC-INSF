@@ -51,3 +51,4 @@ INSERT INTO tb_servico (id_categoria, nm_servico, ds_descricao, nr_valor )
 UPDATE tb_servico
    SET img_servico          ='/storage/filme/servico.jp'
 WHERE id_servico = 1;
+

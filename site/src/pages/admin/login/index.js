@@ -48,7 +48,7 @@ export default function Index() {
     return(
         <main className='loginAdm'>
             <LoadingBar color='#ff0000' ref={ ref }/>
-            <header className='cabecalho'>Logo</header>
+            
 
             <section className ='principal'>
 

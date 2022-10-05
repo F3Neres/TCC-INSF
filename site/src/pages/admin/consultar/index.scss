@@ -39,7 +39,7 @@
 
     .tabela1{
         background-color: #EDEDED;
-        height: 168px;
+        height: 20vh;
         margin-top: 1em;
         margin-left: 2em;
         display: flex;
@@ -61,6 +61,7 @@
         color: black;
         background-color: #D9D9D9;
         width: 95%;
+        display: flex;
     }
    
     
@@ -84,10 +85,11 @@
     .linha4{
         align-items: center;
         color: white;
-       background-color: #4B4B4B;
-       width: 99%;
-       margin-left: 10px;
-       margin-top: 10px;
+        background-color: #4B4B4B;
+        width: 99%;
+        margin-left: 10px;
+        margin-top: 10px;
+       
     }
 
 
@@ -99,7 +101,7 @@
         width: 114px;
         margin-bottom: 6vh;
         margin-top: 6vh;
-        margin-left: 40em;
+        align-self: center;
         font-size: 15px;
         border-radius: 5px;
     }
