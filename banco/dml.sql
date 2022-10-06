@@ -52,3 +52,19 @@ UPDATE tb_servico
    SET img_servico          ='/storage/filme/servico.jp'
 WHERE id_servico = 1;
 
+
+-- CSU06:: listar serviços
+select id_servico        as id,
+            nm_categoria                    as categoria,
+            nm_servico                      as servico,
+            nr_valor                        as valor
+
+        from tb_servico
+        inner join tb_categoria on tb_servico.id_categoria = tb_categoria.id_categoria
+
+        group 
+            by tb_produto.id_produto,
+                nm_categoria ,
+                nm_servico,
+                nr_valor
+

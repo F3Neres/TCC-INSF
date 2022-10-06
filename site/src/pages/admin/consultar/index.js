@@ -3,18 +3,57 @@ import './index.scss'
 
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { listarServico, removerServico } from '../../../api/listarServico.js';
+import { listarServico, removerServico, buscarServicoNome, buscarCategoriaNome, buscarCategoriaValor } from '../../../api/listarServico.js';
 
 
 
 export default function Index() {
 
     const [servicos, setServicos] = useState([]);
+    const [filtroServico, setFiltroServico] = useState('');
+    const [filtroCategoria, setFiltroCategoria] = useState('');
+    const [filtroValor, setFiltroValor] = useState( );
 
     async function carregarServicos(){
         const r = await listarServico();
         setServicos(r);
     }
+
+    async function nomeServico() {
+        const resp = await buscarServicoNome(filtroServico);
+        setServicos(resp);
+    }
+
+    async function nomeCategoria() {
+        const resp = await buscarCategoriaNome (filtroCategoria);
+        setServicos(resp);
+    }
+
+    async function lisarValor() {
+        const resp = await buscarCategoriaValor (filtroValor);
+        setServicos(resp);
+    }
+
+
+
+    useEffect(() => {
+        setTimeout(()=>{
+            nomeServico()
+        },100)
+    },[filtroServico]);
+
+    useEffect(() => {
+        setTimeout(()=>{
+            nomeCategoria()
+        },100)
+    },[filtroCategoria]);
+
+    useEffect(() => {
+        setTimeout(()=>{
+            lisarValor()
+        },100)
+    },[filtroValor]);
+
 
     useEffect(() => {
         carregarServicos();
@@ -58,15 +97,15 @@ export default function Index() {
                 <table className='tabela1'>
                     <tr className='linha1'>
                         <td>Serviço:</td>
-                        <td><input type = "text" value='' /></td>
+                        <td><input type = "text" value={filtroServico} onChange={e => setFiltroServico(e.target.value)} /></td>
                     </tr>
                     <tr className='linha2'>
                         <td> Categoria:</td>
-                        <td><input type = "text" value='' /></td>
+                        <td><input type = "text" value={filtroCategoria} onChange={e => setFiltroCategoria(e.target.value)} /></td>
                     </tr>
                     <tr className='linha3'>
                         <td> Valor:</td>
-                        <td><input type = "text" value='' /></td>
+                        <td><input type = "number" value={filtroValor} onChange={e => setFiltroValor(e.target.value)} /></td>
                     </tr>
                 </table>
 
@@ -90,7 +129,7 @@ export default function Index() {
                             <td>{item.id}</td>
                             <td>{item.categoria}</td>
                             <td>{item.servico}</td>
-                            <td>{item.valor}</td>
+                            <td>R${item.valor}</td>
                             <td><button onClick={() => deletarServico(item.id)}>X</button></td>
                         </tr>
                     )}

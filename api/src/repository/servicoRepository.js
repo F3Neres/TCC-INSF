@@ -55,3 +55,45 @@ export async function removerServico(idServico){
     const {resp} =  await con.query(comando, [idServico])
     return resp
 }
+
+export async function listarServicoNome(nome){
+    const comando= `
+    SELECT id_servico         as id,
+            nm_categoria      as categoria,
+            nm_servico        as servico,
+            nr_valor          as valor       
+        FROM tb_servico
+        INNER JOIN tb_categoria on tb_servico.id_categoria = tb_categoria.id_categoria
+        WHERE nm_servico        like ?;
+    `
+    const [linhas] = await con.query(comando, [`%${nome}%`]);
+    return linhas;
+}
+
+export async function listarServicoCategoria(catNome){
+    const comando= `
+    SELECT id_servico         as id,
+            nm_categoria      as categoria,
+            nm_servico        as servico,
+            nr_valor          as valor       
+        FROM tb_servico
+		INNER JOIN tb_categoria on tb_servico.id_categoria = tb_categoria.id_categoria
+        WHERE nm_categoria        like ?;
+    `
+    const [linhas] = await con.query(comando, [`%${catNome}%`]);
+    return linhas;
+}
+
+export async function listarServicoValor(valor){
+    const comando= `
+    SELECT id_servico         as id,
+            nm_categoria      as categoria,
+            nm_servico        as servico,
+            nr_valor          as valor       
+        FROM tb_servico
+		INNER JOIN tb_categoria on tb_servico.id_categoria = tb_categoria.id_categoria
+        WHERE nr_valor        like ?;
+    `
+    const [linhas] = await con.query(comando, [`%${valor}%`]);
+    return linhas;
+}
