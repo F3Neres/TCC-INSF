@@ -1,4 +1,4 @@
-create database gorilaDB;
+hcreate database gorilaDB;
 drop database gorilaDB;
 
 create table tb_adm(
