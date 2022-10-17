@@ -1,5 +1,7 @@
 .page-home{
-
+    display: flex;
+    flex-direction: column;
+    background-color: #353535;
 
     .faixa1{
         display: flex ;
@@ -14,9 +16,69 @@
         margin-top: 10px;
         font-size: 12px;
     }
-    .head{
+    .faixa2{
+        background-color: #C4C4C4;
+        display: flex ;
+        flex-direction : row ;
+        height: 102px;
+        
+    }
+
+    .serviços{
+        color: black;
+        margin-left: 35px;
+        margin-top: 10px;
+        font-size: 24px;
+               
+        justify-content: space-around;
+    }
+
+
+    .faixa-3{
+        background-image:url(../../images/img1.jpg);
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100%;
+
+
+    }
+
+    .texto{
+        width: 50vh;
 
         
+    }
+
+    .BOTOES{
+        display: flex;
+        flex-direction: column-reverse;
+  
+    }
+
+    .P1{
+        align-self: center;
+        color: white;
+        margin-left: 35px;
+        margin-bottom: 2em;
+        margin-top: 0.5em;
+        font-size: 2.5em;
+        font-weight: 400;
+     
+    }
+
+    .P2{
+        margin-bottom: 5em;
+       
+    }
+
+    .b1{
+        margin: 1em;
+        border-radius: 2em;
+        font-size: 1.2em;
+   
     }
 
 }
