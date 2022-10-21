@@ -45,9 +45,32 @@ export default function Index() {
                     </div>
                 </div>
             </section>
+ 
+            <section className='faixa-4'>
+                <div className='textos'>
+                    <p className='P2'>Nós oferecemos o melhor serviço para manter o seu carro sempre pronto para um bom passeio ou um dia de trabalho </p>
+                    <p className='P3'>Entre em contato conosco e venha nos conhecer!</p>
+                 </div>
+                 <div className='BOTAO'>   
+                    <div>
+                        <button className='b2'>contato</button>
+                    </div>
+            </div>    
+            </section>
 
+            <section className='faixa-5'>
+                <div className='textos'>
+                    <p className='P2'>Nós oferecemos o melhor serviço para manter o seu carro sempre pronto para um bom passeio ou um dia de trabalho </p>
+                    <p className='P3'>Entre em contato conosco e venha nos conhecer!</p>
+                 </div>
+                 <div className='BOTAO'>   
+                    <div>
+                        <button className='b2'>contato</button>
+                    </div>
+            </div>    
+            </section>
                 
-          
+         
             
         </main>
 

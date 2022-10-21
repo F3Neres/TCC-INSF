@@ -1,0 +1,47 @@
+.inicio-adm{
+
+    
+
+   
+    .principal{
+        display: flex;
+        align-items: center;
+        padding: 15vh;
+        background-image: url('../../images/login-back.jpg');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .entradas{
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .adm{
+        display: flex;
+        flex-direction: row;
+        background-color: #FFFFFF;
+        border-radius: 1.5vh;
+        width: 65vh;
+        height: 65vh;
+        opacity: 90%;
+    }
+
+    .cliente{
+        display: flex;
+        flex-direction: row;
+
+        background-color: #FFFFFF;
+        border-radius: 1.5vh;
+        width: 65vh;
+        height: 65vh;
+        opacity: 90%;
+    }
+
+   
+  
+    
+}
