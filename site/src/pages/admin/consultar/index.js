@@ -1,6 +1,8 @@
 import '../../common/index.scss'
 import './index.scss'
 
+import Lateral from '../../../componets/lateral/index.js'
+
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { listarServico, removerServico, buscarServicoNome, buscarCategoriaNome, buscarCategoriaValor } from '../../../api/listarServico.js';
@@ -75,16 +77,7 @@ export default function Index() {
 
         <main className='consultar'>
 
-            <div className='esquerda'>
-
-                <h3>Milena</h3>
-                <hr/>
-                <Link className="links" to="/servico"> Serviço </Link>
-                <hr/>
-                <Link className="links" to="/categoria"> Categoria </Link>
-                <hr/>
-            
-            </div>
+            <Lateral />
 
         <section className='pag-centro'> 
 

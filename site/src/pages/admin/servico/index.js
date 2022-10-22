@@ -1,6 +1,8 @@
 import '../../common/index.scss'
 import './index.scss'
 
+import Lateral from '../../../componets/lateral/index.js'
+
 import { cadastrarServico, imagemServico } from '../../../api/cadastrarServico'
 import { listarCategoria } from '../../../api/cadastrarCategoria'
 
@@ -62,17 +64,7 @@ export default function Index() {
 
         <main className='servico'>
 
-            <div className='esquerda'>
-
-                <h3>Milena</h3>
-                <hr/>
-                <Link class="links" to="/categoria"> Categoria </Link>
-                <hr/>
-                <Link class="links" to="/consultar"> Consultar </Link>
-                <hr/>
-
-            
-            </div>
+            <Lateral />
 
             <section className='pag-centro'>
 

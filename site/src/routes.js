@@ -33,12 +33,12 @@ export const Rotas = () =>{
     return(
         <BrowserRouter>
             <Routes>
-                <Route path = '/home' element={<LadingPage />} />
+                <Route path = '/' element={<LadingPage />} />
                 <Route path = '/home/serviço' element={<Serviço/>} />
                 <Route path = '/home/inicio' element={<Inicio/>} />
                 <Route path = '/home/contato' element={<Contato/>} />
                 <Route path = '/cliente/principal' element={<Principal/>} />
-                <Route path = '/' element={<LoginAdm />} />
+                <Route path = '/Ladmin' element={<LoginAdm />} />
                 <Route path = '/categoria' element={<Categoria />} />
                 <Route path = '/servico' element={<Servico />} />
                 <Route path = '/consultar' element={<Consultar />} />

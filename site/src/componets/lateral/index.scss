@@ -1,0 +1,50 @@
+
+
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #000000;
+    width: 25vh;
+    height: 100;
+    color: #fff;
+    
+    
+    .lista{
+        width: 98%;
+    }
+
+    hr{
+        width: 100%;
+        color: #fff;
+    }
+
+    h1, h2, h3{
+        font-weight: 450;
+        color: #fff !important;
+        margin: 2em !important;
+    }
+    
+    .links{
+        margin-bottom: 0.3em;
+        margin-top: 0.5em;
+        margin-left: 0.2em;
+    }
+
+    button{
+        background-color: red;
+        font-size: 1em;
+        width: 5em;
+        margin-bottom: 3em;
+        color: #fff;
+        border-radius: 0.5em;
+    }
+
+    button:active{
+        color: #fff;
+        background-color: #a00000;
+        cursor: pointer;
+    }
+
+}

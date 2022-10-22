@@ -2,10 +2,12 @@ import '../../common/index.scss'
 import './index.scss'
 
 import { cadastrarCategoria, imagemCategoria } from '../../../api/cadastrarCategoria'
+import Lateral from '../../../componets/lateral/index.js'
 
 import storage from "local-storage"
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+
 
 
 export default function Index() {
@@ -36,16 +38,7 @@ export default function Index() {
 
         <main className='categoria'>
 
-            <div className='esquerda'>
-
-                <h3>Milena</h3>
-                <hr/>
-                <Link class="links" to="/servico"> Serviço </Link>
-                <hr/>
-                <Link class="links" to="/consultar"> Consultar </Link>
-                <hr/>
-            
-            </div>
+            <Lateral/>
 
             <section className='pag-centro'>
 

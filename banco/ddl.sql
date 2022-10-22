@@ -1,5 +1,7 @@
-hcreate database gorilaDB;
-drop database gorilaDB;
+create database gorilaDB;
+use gorilaDB;
+
+
 
 create table tb_adm(
 	id_adm 					int primary key auto_increment,
@@ -7,6 +9,9 @@ create table tb_adm(
     ds_email       			varchar(100),
     ds_senha       			varchar(50) not null
 );
+
+INSERT INTO tb_adm( nm_adm, ds_email, ds_senha)
+    VALUES ('Milena', 'admin', '123');
 
 create table tb_usuario(
 	id_usuario 				int primary key auto_increment,
@@ -27,7 +32,7 @@ create table tb_login_usuario(
 create table tb_categoria(
 	id_categoria			int primary key auto_increment,
     nm_categoria			varchar(200),
-    img_categoria				varchar(300),
+    img_categoria			varchar(300),
     ds_descricao			varchar(1000)
 );
 
@@ -88,3 +93,18 @@ create table tb_pagamento_dinheiro(
     nr_troco				decimal(15, 2),
     foreign key (id_pedido) references tb_pedido(id_pedido)
 );
+
+select id_servico        as id,
+            nm_categoria                    as categoria,
+            nm_servico                      as sevico,
+            nr_valor                        as valor
+
+        from tb_servico
+        inner join tb_categoria on tb_servico.id_categoria = tb_categoria.id_categoria
+
+        group 
+            by tb_servico.id_servico,
+                nm_categoria ,
+                nm_servico,
+                nr_valor
+

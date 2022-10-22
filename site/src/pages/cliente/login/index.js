@@ -17,11 +17,11 @@ export default function Index() {
 
                     <h1>LOGAR NO SISTEMA</h1>
                     <h3>EMAIL:</h3>
-                    <input class="box" type="text" value={''} onChange={''}/>
+                    <input class="box" type="text"/>
                     <h3>SENHA:</h3>
-                    <input class="box" type="password" value={''} onChange={''}/>
-                    <h4 className='erro'>{erro}</h4>
-                    <button onClick={''} disabled={''}>ENTRAR</button>
+                    <input class="box" type="password"/>
+                    <h4 className='erro'></h4>
+                    <button>ENTRAR</button>
                 </div>
 
             </section>
