@@ -87,36 +87,70 @@
         background-color: #C4C4C4;
         display: flex ;
         flex-direction : row ;
-        height: 250px;
-    
+        justify-content: space-between;
+        height: 20vh;
+    }
+
+    .textos{
+        display: flex;
+        flex-direction: column;
+        width: 75%  ;
+        margin-left: 2em;
+    }
     
 
     .P2{
-        align-self: center;
         color: white;
-        margin-left: 2em;
-        margin-bottom: 2em;
-        margin-top: 0.5em;
-        font-size: 1.5em;
-        margin-bottom: 5em;
       
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        font-size: 2em;   
 
     }
     .P3{
-       
+
+        color: rgb(24, 24, 24);
     
-        
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+        font-size: 1.5em; 
+       
     }
+    
      .b2{
-        margin: 1em;
-        border-radius: 2em;
-        font-size: 1.2em;
-   
+        margin: 4.5em;
+        border-radius: 8em;
+        font-size: 1.5em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+
     }
     .BOTAO{
         display: flex;
         flex-direction: column-reverse;
+        justify-content: center;
   
     }
+    .faixa-5{
+        background-color: #494949;
+        display: flex ;
+        flex-direction : column ;
+        height: 50vh;
+        align-items: center;
+        font-size: 1.5em;
+        margin-top: 1.5em;
     }
+    
+
+    .imagens1{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5em;
+        justify-content: space-evenly;
+        width: 100%;
+
+    }
+
 }
