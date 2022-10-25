@@ -5,10 +5,11 @@ import combo1 from '../../images/img-combo1.png'
 import combo2 from '../../images/img-combo2.png'
 import combo3 from '../../images/img-combo3.png'
 import combo4 from '../../images/img-combo4.png'
-import cuidados1 from '../../images/img-cuidadosexternos.png'
+import cuidados1 from '../../images/img-cuidadoexternas.png'
 import cuidados2 from '../../images/img-cuidadosextras.png'
 
 import cuidados3 from '../../images/img-cuidadosinternos.png'
+import somos from '../../images/img-quemsomos.png'
 
 
 // https://wallpaperscraft.com/catalog/cars
@@ -83,7 +84,8 @@ export default function Index() {
                         <img src={combo3} alt="imagem" width="200em" height="200em" />
                         <img src={combo4} alt="imagem" width="200em" height="200em" />
                     </div>
-                    <hr />
+
+                    <hr/>
                     
                     <div className='titulo2'>
                         <h1 className='t2'>NOSSOS SERVIÇOS ESPECIALIZADOS</h1>
@@ -91,7 +93,36 @@ export default function Index() {
                      
                     </div>
 
-                    <div className=''></div>
+                    <div className='imagem2'>
+                    
+                        <img src={cuidados1} alt="imagem" width="200em" height="200em" />
+                        <img src={cuidados2} alt="imagem" width="200em" height="200em" />
+                        <img src={cuidados3} alt="imagem" width="200em" height="200em" />
+                        
+                  
+                    </div>
+
+                     <hr/>
+
+                    <div className='faixa-6'>
+
+                        <h1 className='t6'>QUEM SOMOS NÓS</h1>
+
+                        <div className='bloco6'> 
+                            <div className='imagens6'>
+                                <img src={somos} alt="imagem" width="600em" height="596em" />
+                            </div>
+
+                            <div className='somos'>
+                                <p className='começo'>Desde o início, em 2007, nosso propósito sempre foi ir além da lavagem de veículos. Eu sabia que poderíamos chegar longe. Sempre acreditei que o que eu procurava como cliente (comprometimento, qualidade e excelência) seria o meu diferencial como empreendedor. No Premiere Lava-rápido, a qualidade é reconhecida nos detalhes e seu veículo é entendido como único. Aqui, você conta com uma gama de soluções em estética automotiva e garantimos o melhor serviço possível. Venha se surpreender com o nosso trabalho!
+                                Esperamos por você.</p>
+                            </div>
+                        </div>
+
+                     
+
+                    </div>
+
           
 
                 
@@ -113,3 +144,4 @@ export default function Index() {
 
 
 }
+

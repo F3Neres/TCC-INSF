@@ -109,7 +109,7 @@
     }
     .P3{
 
-        color: rgb(24, 24, 24);
+        color: #181818;
     
         margin-bottom: 0.5em;
         margin-top: 0.5em;
@@ -134,13 +134,17 @@
   
     }
     .faixa-5{
-        background-color: #494949;
+        background-color: #353434;
         display: flex ;
         flex-direction : column ;
-        height: 50vh;
+        height: 150vh;
         align-items: center;
         font-size: 1.5em;
         margin-top: 1.5em;
+    }
+    .t1{
+        color: aliceblue;
+
     }
     
 
@@ -152,5 +156,85 @@
         width: 100%;
 
     }
+     
+    .titulo2{
+        color: aliceblue;
+        display: flex ;
+        flex-direction : column ;
+        align-items: center;
+        font-size: 1em;
+        margin-top: 3em;
 
+    }
+
+    .p5{
+        color: #494949;
+        font-size: 0.8em;
+      
+
+    }
+
+    .imagem2{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5em;
+        justify-content: space-evenly;
+        width: 100%;
+}
+    .quemsomos{
+        display: flex ;
+        flex-direction : column ;
+        align-items: center;
+        font-size: 1.5em;
+        margin-top: 1.5em;
+}
+        .somos {
+            display: flex;
+            flex-direction: column;
+            width: 75%  ;
+            margin-left: 2em;
+    }
+
+    .faixa-6{
+        background-color: #353434;
+        display: flex ;
+        flex-direction : column;
+        margin-top: 3em;
+        align-items: center;
+        font-size: 1.5em;
+   
+    }
+
+
+
+    .t6{
+
+
+    }
+
+    .bloco6{
+        background-color: #353434;
+        display: flex ;
+        flex-direction : row;
+        margin-top: 2em;
+        align-items: center;
+ 
+
+
+    }
+
+    .imagens6{
+        display: flex;
+        flex-direction: row;
+        margin-top: 5em;
+        justify-content: space-evenly;
+        width: 100%;
+
+
+    }
+
+    .começo{
+        font-size: 24px;
+
+    }
 }
