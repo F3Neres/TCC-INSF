@@ -79,10 +79,10 @@ export default function Index() {
                     </div>
 
                     <div className='imagens1'>
-                        <img src={combo1} alt="imagem" width="200em" height="200em" />
-                        <img src={combo2} alt="imagem" width="200em" height="200em" />
-                        <img src={combo3} alt="imagem" width="200em" height="200em" />
-                        <img src={combo4} alt="imagem" width="200em" height="200em" />
+                        <img src={combo1} alt="imagem" width="300em" height="300em" />
+                        <img src={combo2} alt="imagem" width="300em" height="300em" />
+                        <img src={combo3} alt="imagem" width="300em" height="300em" />
+                        <img src={combo4} alt="imagem" width="300em" height="300em" />
                     </div>
 
                     <hr/>
@@ -95,9 +95,9 @@ export default function Index() {
 
                     <div className='imagem2'>
                     
-                        <img src={cuidados1} alt="imagem" width="200em" height="200em" />
-                        <img src={cuidados2} alt="imagem" width="200em" height="200em" />
-                        <img src={cuidados3} alt="imagem" width="200em" height="200em" />
+                        <img src={cuidados1} alt="imagem" width="300em" height="300em" />
+                        <img src={cuidados2} alt="imagem" width="300em" height="300em" />
+                        <img src={cuidados3} alt="imagem" width="300em" height="300em" />
                         
                   
                     </div>
@@ -128,11 +128,9 @@ export default function Index() {
                 
 
                </section>
+           
 
-
-
-
-              
+                          
  
 
          
