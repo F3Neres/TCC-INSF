@@ -1,10 +1,10 @@
 
-import axios from 'axios'
+import { login } from '../../../api/loginAdm.js'
 import { useNavigate } from 'react-router-dom'
 
 import storage from 'local-storage'
 import LoadingBar from 'react-top-loading-bar'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 import '../../common/index.scss'
 import './index.scss'
@@ -18,20 +18,25 @@ export default function Index() {
     const navigate = useNavigate();
     const ref = useRef();
 
+    useEffect(() => {
+        if (storage('usuario-logado')){
+            navigate('/categoria')
+            // endereço temporario
+        }
+    })
+
     async function entrarClick(){
         ref.current.continuousStart()
         setCarregando(true);
 
         try{
-            const r = await axios.post('http://localhost:5000/admin/login', {
-                email: email,
-                senha: senha
-            });
+            const r = await login(email, senha);
+
             storage('usuario-logado', r);
 
             setTimeout(() => {
                 navigate('/categoria');
-            }, 2000);
+            }, 1500);
             
 
         }catch(err){
