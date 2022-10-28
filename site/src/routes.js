@@ -24,6 +24,9 @@ import Principal from './pages/cliente/principal/index.js'
 //LadingPage
 import LadingPage from './pages/home/index.js'
 import Serviço from './pages/serviço/index.js'
+import Lavagem from './pages/serviço/lavagem/index.js'
+import Higienizacao from './pages/serviço/higienizacao/index.js'
+import Renovacaopintura from './pages/serviço/renovacaopintura/index.js'
 import Inicio from './pages/inicio/index.js'
 import Contato from './pages/contato/index.js'
 
@@ -41,6 +44,9 @@ export const Rotas = () =>{
                 <Route path = '/Loginadmin' element={<LoginAdm />} />
                 <Route path = '/categoria' element={<Categoria />} />
                 <Route path = '/servico' element={<Servico />} />
+                <Route path = '/servico/lavagem' element={< Lavagem />} />
+                <Route path = '/servico/higienizacao' element={<Higienizacao />} />
+                <Route path = '/servico/renovacaopintura' element={<Renovacaopintura />} />
                 <Route path = '/consultar' element={<Consultar />} />
                 <Route path = '/homeadmin' element={<Home />} />
                 <Route path = '/agenda' element={<Agenda />} />

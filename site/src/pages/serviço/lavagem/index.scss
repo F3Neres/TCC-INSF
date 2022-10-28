@@ -1,0 +1,23 @@
+.page-lavagem{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    
+    .faixa1{
+        display: flex ;
+        background-color: black;
+        height: 19em;
+        width: 100em;
+    }
+    
+    .t1{
+        color: white;
+        display: flex;
+        align-self: center;
+        font-size: 64px;
+        margin: 10em;
+        font-family: 'Iceland';
+    }
+
+
+}

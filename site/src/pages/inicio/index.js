@@ -9,6 +9,7 @@ import '../common/index.scss'
 import './index.scss'
 
 import { Link } from 'react-router-dom'
+//import { Link, useResolvedPath } from 'react-router-dom'
 
 import adm from '../../images/adm.png'
 import cliente from '../../images/cliente.png'
@@ -24,7 +25,7 @@ export default function Index() {
 
                 <div className ='entradas'>
 
-                <Link className="links" to="/Ladmin"><div className='adm'> 
+                <Link className="links" to="/Loginadmin"><div className='adm'> 
                         <img src={adm} alt="imagem" width="95%" height="95%" />
                     </div></Link>
 
