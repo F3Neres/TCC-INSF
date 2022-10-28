@@ -1,44 +1,70 @@
-
-import '../common/index.scss'
 import './index.scss';
+import '../common/index.scss'
 import { Link } from 'react-router-dom'
+import logo from '../../images/logo.png'
+import contato from '../../images/contato-home.png'
+
+
+
+
+
 export default function Index() {
 
     return (
         <main className='page-contato'>
 
-            <section class='faixa-1'>
+                <section class='faixa1'>
 
-                <div class='endereco'>R. Café Natal,235 - Vila Natal - São Paulo - SP  |  (11) 98492-6704</div>
+                    <div class='endereco'>R. Café Natal,235 - Vila Natal - São Paulo - SP  |  (11) 98492-6704</div>
 
-            </section>
+                </section>
 
-            <section className='faixa-2'>
-                <div> 
-                <Link to='/home'> <img class='logo'  src='/src/images/logo.png' alt=''/> </Link>
-                </div>
+                <section className='faixa2'>
+                    <div> 
+                    <Link to='/'> <img src={logo} alt="imagem" width="109px" height="97px" /></Link>
+                    </div>
 
-                <div className='serviços'>
-                <Link to=''> Serviços </Link>
-                <Link to=''> Contato </Link>
-                <Link to='/'> Login </Link>
-                </div>
+                    <div className='servico'>
+                    <Link to='/home/serviço'> Serviços </Link>
+                    </div>
+
+                    <div className='contato'>
+                    <Link to='/home/contato'> Contato </Link>
+                    </div>
+
+                    <div className='login'>
+                    <Link to='/home/inicio'> Login </Link>
+                     </div>
+
+                </section>
+
+                <section className='faixa-3'>
+
+                    <img src={contato} alt="imagem" width="100%" height="260px" />
+                    
+                </section>
+
+                <section className='faixa-4'>
+
+                    <div>
+                        <div>
+
+                        </div>
+
+                        <div>
+                            
+                        </div>
+                    </div>
+
+                </section>
+                                
+
             
-            </section>
-
-            <section className='faixa-3'>
-                <div>
-                   <p className='p1'> serviços</p>
-                    </div> 
-                
-                <div>
-                <Link to='home'> home</Link>
-                <p className='p2'>serviços</p>
-                </div>
-
-            </section>
+        </main>
 
 
-            </main>
     )
+
+
 }
+

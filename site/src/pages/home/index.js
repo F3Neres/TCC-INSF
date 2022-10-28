@@ -10,6 +10,7 @@ import cuidados2 from '../../images/img-cuidadosextras.png'
 
 import cuidados3 from '../../images/img-cuidadosinternos.png'
 import somos from '../../images/img-quemsomos.png'
+import logo from '../../images/logo.png'
 
 
 // https://wallpaperscraft.com/catalog/cars
@@ -28,13 +29,19 @@ export default function Index() {
  
             <section className='faixa2'>
                 <div> 
-                <Link to='/home'> <img class='logo'  src='/src/images/logo.png' alt=''/> </Link>
+                <Link to='/'> <img src={logo} alt="imagem" width="109px" height="97px" /></Link>
                 </div>
 
-                <div className='serviços'>
-                <Link to=''> Serviços </Link>
-                <Link to=''> Contato </Link>
-                <Link to='/'> Login </Link>
+                <div className='servico'>
+                <Link to='/home/serviço'> Serviços </Link>
+                </div>
+
+                <div className='contato'>
+                <Link to='/home/contato'> Contato </Link>
+                </div>
+
+                <div className='login'>
+                <Link to='/home/inicio'> Login </Link>
                 </div>
             
             </section>
@@ -54,6 +61,7 @@ export default function Index() {
                         <button className='b1'> LOCALIZAÇÃO</button>
                     </div>
                 </div>
+
             </section>
  
             <section className='faixa-4'>
@@ -85,7 +93,8 @@ export default function Index() {
                         <img src={combo4} alt="imagem" width="300em" height="300em" />
                     </div>
 
-                    <hr/>
+                    <br/>
+
                     
                     <div className='titulo2'>
                         <h1 className='t2'>NOSSOS SERVIÇOS ESPECIALIZADOS</h1>

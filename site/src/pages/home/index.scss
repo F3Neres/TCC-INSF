@@ -24,14 +24,33 @@
         
     }
 
-    .serviços{
+    .servico{
         color: black;
-        margin-left: 35px;
-        margin-top: 10px;
-        font-size: 24px;
-               
-        justify-content: space-around;
+        font-size: 2em;
+        display: flex ;
+        margin-right: 2em;
+        margin-left: 35em;
+        margin-top: 1em;
     }
+
+    .contato{
+        color: black;
+        font-size: 2em;
+        display: flex ;
+        margin-right: 2em;
+        margin-top: 1em;
+
+
+    }
+
+    .login{
+        color: black;
+        font-size: 2em;
+        display: flex ;
+        margin-top: 1em;
+
+    }
+
 
 
     .faixa-3{
@@ -62,7 +81,7 @@
 
     .P1{
         align-self: center;
-        color: white;
+        color: black;
         margin-left: 35px;
         margin-bottom: 2em;
         margin-top: 0.5em;
@@ -100,7 +119,7 @@
     
 
     .P2{
-        color: white;
+        color: black;
       
         margin-bottom: 0.5em;
         margin-top: 0.5em;
@@ -168,7 +187,7 @@
     }
 
     .p5{
-        color: #494949;
+        color: #d1cece;
         font-size: 0.8em;
       
 
@@ -188,11 +207,11 @@
         font-size: 1.5em;
         margin-top: 1.5em;
 }
-        .somos {
-            display: flex;
-            flex-direction: column;
-            width: 75%  ;
-            margin-left: 2em;
+    .somos {
+        display: flex;
+        flex-direction: column;
+        width: 75%  ;
+        margin-left: 2em;
     }
 
     .faixa-6{
@@ -250,6 +269,8 @@
 
     }
      
-    
+    .hr{
+        color: #ffff;
+    }
 
 }

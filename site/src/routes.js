@@ -38,7 +38,7 @@ export const Rotas = () =>{
                 <Route path = '/home/inicio' element={<Inicio/>} />
                 <Route path = '/home/contato' element={<Contato/>} />
                 <Route path = '/cliente/principal' element={<Principal/>} />
-                <Route path = '/Ladmin' element={<LoginAdm />} />
+                <Route path = '/Loginadmin' element={<LoginAdm />} />
                 <Route path = '/categoria' element={<Categoria />} />
                 <Route path = '/servico' element={<Servico />} />
                 <Route path = '/consultar' element={<Consultar />} />
