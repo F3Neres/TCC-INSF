@@ -5,10 +5,13 @@
 //import LoadingBar from 'react-top-loading-bar'
 //import { useState, useRef } from 'react'
 
-//import '../../common/index.scss'
-
+import '../common/index.scss'
 import './index.scss'
-import adm from '../../images/icon-adm.png'
+
+import { Link } from 'react-router-dom'
+
+import adm from '../../images/adm.png'
+import cliente from '../../images/cliente.png'
 
 export default function Index() {
     
@@ -21,17 +24,18 @@ export default function Index() {
 
                 <div className ='entradas'>
 
-                    <div className='adm'> 
-                    <img src='../../images/icon-adm.png'/>
-                    </div>
+                <Link className="links" to="/Ladmin"><div className='adm'> 
+                        <img src={adm} alt="imagem" width="95%" height="95%" />
+                    </div></Link>
 
-                    <div className='cliente'> 
-                    <img src='../../images/icon-adm.png'/>
-                    </div>
+                    <Link className="links" to="/login/cliente"><div className='cliente'> 
+                        <img src={cliente} alt="imagem" width="80%" height="80%" />
+                    </div></Link>
 
                 </div>
 
-                <button className='botao '> Voltar</button>
+
+                <Link className="links" to="/"><button className='botao '> Voltar</button></Link>
 
             </section> 
 

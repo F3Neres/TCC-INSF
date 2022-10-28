@@ -1,6 +1,7 @@
 
 import { login } from '../../../api/loginAdm.js'
 import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import storage from 'local-storage'
 import LoadingBar from 'react-top-loading-bar'
@@ -53,9 +54,12 @@ export default function Index() {
     return(
         <main className='loginAdm'>
             <LoadingBar color='#ff0000' ref={ ref }/>
+
+            <Link className="links" to="/home/inicio"><button className='botao '> Voltar</button></Link>
             
 
             <section className ='principal'>
+
 
                 <div className ='login'>
                     
@@ -66,8 +70,10 @@ export default function Index() {
                     <h3>SENHA:</h3>
                     <input class="box" type="password" value={senha} onChange={e => setSenha(e.target.value)}/>
                     <h4 className='erro'>{erro}</h4>
-                    <button onClick={entrarClick} disabled={carregando}>ENTRAR</button>
+                    <button className='botaoLogin' onClick={entrarClick} disabled={carregando}>ENTRAR</button>
                 </div>
+
+                
 
             </section>
         </main>

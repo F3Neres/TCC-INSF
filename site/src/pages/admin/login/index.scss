@@ -1,5 +1,11 @@
 .loginAdm{
 
+    background-image: url('../../../images/login-back.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    min-height: 100vh;
+
     
 
 
@@ -7,12 +13,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 15vh;
-        background-image: url('../../../images/login-back.jpg');
-        background-repeat: no-repeat;
-        background-size: 100%;
-        width: 100%;
-        min-height: 100vh;
+        padding: 4vh;
     }
 
     .login{
@@ -53,7 +54,7 @@
         opacity: 100%;
     }
 
-    button{
+    .botaoLogin{
         font-size: 1em;
         margin: 2em;
         width: 20vh;
@@ -69,6 +70,16 @@
         color: #ff0000;
         align-self: center;
         font-size: 1em;
+    }
+
+    .botao{
+        margin-top: 1em;
+        width: 8em;
+        height: 2.5em;
+        border-radius: 1em;
+        font-weight: 600;
+        font-size: 1em;    
+
     }
 
 
