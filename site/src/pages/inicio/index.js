@@ -31,6 +31,8 @@ export default function Index() {
 
                 </div>
 
+                <button className='botao '> Voltar</button>
+
             </section> 
 
            
