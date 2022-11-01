@@ -1,6 +1,7 @@
 import './index.scss';
 import '../../common/index.scss'
 import { Link } from 'react-router-dom'
+import lavagem from '../../../images/lavagens-servico.png'
 
 //IMPORTAÇÃO DE FONTE
 //site: https://fonts.google.com/
@@ -29,13 +30,20 @@ export default function Index() {
             </section>
 
             <section class='faixa2'>
-                <div>
-
+                
+                <div className='imagem1'> 
+                    <img src={lavagem} alt="imagem" width="530px" height="298px" />
                 </div>
-
+                
                 <div>
-                    
+                    <h1>Acabamento padrão em todas as lavagens. </h1>
+                    <p> Em todas as lavagens realizadas o acabamento é padrão.
+                        Secagem, Vidros, Pretinho nos pneus. Aspiração, Biodiesel nos para-barros, Cantos de portas, Limpeza de painéis e Silicone.
+                        Diferencia-se apenas no processo de lavagem onde alguns produtos são acrescentados.
+                        <br> </br>
+                        As lavagem são feitas com shampoo a base de cera de carnauba, ecologicamente correto e nao agride o meio ambiente.</p>
                 </div>
+           
                 
 
             </section>

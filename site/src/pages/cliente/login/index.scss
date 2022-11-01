@@ -1,0 +1,100 @@
+.loginCliente{
+
+    background-image: url('../../../images/login-back.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%;
+    min-height: 100vh;
+
+    
+
+
+    .principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4vh;
+    }
+
+    .login{
+        display: flex;
+        flex-direction: column;
+        background-color: #1D1919;
+        border-radius: 1.5vh;
+        width: 65vh;
+        opacity: 90%;
+    }
+
+    h1{
+        margin: 1em;
+        margin-top: 1.5em;
+        color: #fff;
+        align-self: center;
+        font-size: 1.5em;
+        font-style: italic;
+        font-weight: 400;
+        opacity: 100%;
+    }
+    h3{
+        margin: 2em;
+        margin-bottom: 0em;
+        color: #fff;
+        font-weight: 400;
+        opacity: 100%;
+    }
+
+    input{
+        font-size: 1em;
+        margin: 2em;
+        margin-top: 0em;
+        color: #000;
+        background-color: #939393;
+        height: 2em;
+        border-radius: 1vh;
+        opacity: 100%;
+    }
+
+    .botaoLogin{
+        font-size: 1em;
+        margin: 2em;
+        width: 20vh;
+        align-self: center;
+        height: 5vh;
+        border-radius: 2vh;
+        opacity: 100%;
+    }
+
+    .erro{
+        font-weight: 400;
+        opacity: 100%;
+        color: #ff0000;
+        align-self: center;
+        font-size: 1em;
+    }
+
+    .botao{
+        margin-top: 1em;
+        width: 8em;
+        height: 2.5em;
+        border-radius: 1em;
+        font-weight: 600;
+        font-size: 1em;    
+
+    }
+
+    .botaoCadastro{
+        font-size: 1em;
+        margin: 2em;
+        width: 20vh;
+        align-self: center;
+        height: 5vh;
+        border-radius: 2vh;
+        opacity: 100%;
+    }
+
+    .LinkCad{
+        align-self: center;
+    }
+    
+    
+}

@@ -51,7 +51,7 @@ export default function Index() {
                 <div className='texto'>
                     <p className='P1'>ESTÉTICA COMPLETA DO SEU VEICULO</p>
                     <p className='P1'>PACOTES COM ATÉ 10% DE DESCONTO</p>
-                    <p className='P1 P2'>SORTEIOS</p>
+                    <p className='P1-P2'>SORTEIOS</p>
                 
                 </div>
 
