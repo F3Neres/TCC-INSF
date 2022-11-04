@@ -42,27 +42,25 @@ export default function Index() {
                 <div className='textos'>
                     <h1 className='t2'>Acabamento padrão em todas as lavagens. </h1>
 
-                    <p  className='p2'> Em todas as lavagens realizadas o acabamento é padrão.</p>
+                    <p className='p2'> Em todas as lavagens realizadas o acabamento é padrão.</p>
                         <br></br>
-                      <p className='p3'>  Secagem, Vidros, Pretinho nos pneus. Aspiração, Biodiesel 
-                        <br></br> 
-                        nos para-barros, Cantos de portas, Limpeza de painéis e Silicone.
-                        <br></br>
+                    <p className='p3'>  Secagem, Vidros, Pretinho nos pneus. Aspiração, Biodiesel nos para-barros, Cantos de portas, Limpeza de painéis e Silicone.
                         Diferencia-se apenas no processo de lavagem onde alguns produtos são acrescentados.</p>
-                        <br></br>
                        
-                       <p className='p4'> As lavagem são feitas com shampoo a base de cera de carnauba, ecologicamente correto e nao agride o meio ambiente.</p>
+                    <p className='p4'> As lavagem são feitas com shampoo a base de cera de carnauba,ecologicamente correto e nao agride o meio ambiente.</p>
                 </div>
            
                 
 
             </section>
-              <br />
+
+            
+            <br />
             
 
                 <section class='faixa3'>
                 <div className='img2'>
-                    <img src={lavagens2} alt="imagem" width="554px" height="305"  />
+                    <img src={lavagens} alt="imagem" width="355px" height="250"  />
                 </div>
                 <div className='textos2'>
 
@@ -71,10 +69,7 @@ export default function Index() {
                         <hr />
                         <p  className='p5'> Lavagem com shampoo neutro e acabamento interno padrão de todas as lavagens.</p>
                     </div>
-                    <button className='bot1'>ADICIONAR SERVIÇO</button>
-                     
-                       
-                     
+              
                 </div>
            
                 
@@ -82,8 +77,9 @@ export default function Index() {
             </section>
 
             <section class='faixa4'>
+
                 <div className='img3'>
-                    <img src={lavagens} alt="imagem" width="554px" height="305"  />
+                    <img src={lavagens2} alt="imagem" width="355px" height="250"  />
                 </div>
                 <div className='textos3'>
 
@@ -92,17 +88,34 @@ export default function Index() {
                         <hr />
                         <p  className='p6'> Finalidade: Brilho e proteção à pintura. A resina não é solúvel em água (a base de látex não sai com chuva) durando muito mais do que qualquer outra cera disponível no mercado.</p>
                     </div>
-                    <button className='bot2'>ADICIONAR SERVIÇO</button>
-                     
-                       
-                     
+     
                 </div>
-           
+
+
+            </section>
+
+            <section class='faixa5'>
                 
+                <div className='img4'>
+                    <img src={lavagens3} alt="imagem" width="355px" height="250"  />
+                </div>
+                <div className='textos4'>
+
+                    <div>
+                        <h1 className='t5'>  Lavagem com brancol </h1>
+                        <hr />
+                        <p  className='p7'> Finalidade: Indicado para carro branco. O Brancol tem uma ação que remove manchas de “encardido” do branco, manchas de graxa. O carro sai o mais branco possível em uma lavagem.</p>
+                    </div>
+     
+                </div>
+
 
             </section>
 
 
+            <Link to='/home/serviço'> <button className='botao1'> Voltar para Serviços </button> </Link>
+
+            <br />
 
 
                
