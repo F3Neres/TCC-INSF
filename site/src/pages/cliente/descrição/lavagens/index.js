@@ -1,5 +1,5 @@
-import './index.scss';
-import '../common/index.scss'
+
+import '../../../common/index.scss'
 import { Link } from 'react-router-dom'
 import lavagem from '../../../../images/lavagens-servico.png'
 import lavagens from '../../../../images/img-lavagens.png'

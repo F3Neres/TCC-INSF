@@ -12,6 +12,8 @@ import cuidados3 from '../../images/img-cuidadosinternos.png'
 import somos from '../../images/img-quemsomos.png'
 import logo from '../../images/logo.png'
 
+import Cabecalho from '../../componets/cabecalho/index.js'
+
 
 // https://wallpaperscraft.com/catalog/cars
 
@@ -21,31 +23,7 @@ export default function Index() {
     return (
         <main className='page-home'>
 
-            <section class='faixa1'>
-
-                <div class='endereco'>R. Café Natal,235 - Vila Natal - São Paulo - SP  |  (11) 98492-6704</div>
-
-            </section>
- 
-            <section className='faixa2'>
-                <div> 
-                <Link to='/'> <img src={logo} alt="imagem" width="109px" height="97px" /></Link>
-                </div>
-
-                <div className='servico'>
-                <Link to='/home/serviço'> Serviços </Link>
-                </div>
-
-                <div className='contato'>
-                <Link to='/home/contato'> Contato </Link>
-                </div>
-
-                <div className='login'>
-                <Link to='/home/inicio'> Login </Link>
-                </div>
-            
-            </section>
-
+            <Cabecalho/>
 
             <section className='faixa-3'>
                 <div className='texto'>

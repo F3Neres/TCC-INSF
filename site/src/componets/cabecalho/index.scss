@@ -1,0 +1,38 @@
+header{
+
+    display: flex;
+    flex-direction: column;
+
+    
+    .faixa1{
+        color: #fff;
+        background-color: black;
+        height: 2.5em;
+    }
+
+    .endereco{
+        margin: 0.5em;
+
+    }
+
+    .faixa2{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 7em;
+        background-color: #C4C4C4;
+
+    }
+
+    .links{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        width: 30%;
+        font-size: 2em;
+        font-weight: 450;    
+    }
+
+
+}

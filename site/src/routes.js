@@ -5,7 +5,7 @@ import LoginAdm from './pages/admin/login/index.js'
 import Categoria from './pages/admin/categoria/index.js'
 import Consultar from './pages/admin/consultar/index.js'
 import Home from './pages/admin/home/index.js'
-import Servico from './pages/admin/servico/index.js'
+import AdmServico from './pages/admin/servico/index.js'
 import Agenda from './pages/admin/agenda/index.js'
 
 //cliente
@@ -23,10 +23,10 @@ import Principal from './pages/cliente/principal/index.js'
 
 //LadingPage
 import LadingPage from './pages/home/index.js'
-import Serviço from './pages/serviço/index.js'
-import Lavagem from './pages/serviço/lavagem/index.js'
-import Higienizacao from './pages/serviço/higienizacao/index.js'
-import Renovacaopintura from './pages/serviço/renovacaopintura/index.js'
+import Servico from './pages/servico/inicio/index.js'
+import Lavagem from './pages/servico/lavagem/index.js'
+import Higienizacao from './pages/servico/higienizacao/index.js'
+import Renovacaopintura from './pages/servico/renovacaopintura/index.js'
 import Inicio from './pages/inicio/index.js'
 import Contato from './pages/contato/index.js'
 
@@ -37,13 +37,13 @@ export const Rotas = () =>{
         <BrowserRouter>
             <Routes>
                 <Route path = '/' element={<LadingPage />} />
-                <Route path = '/home/serviço' element={<Serviço/>} />
+                <Route path = '/home/servico' element={<Servico/>} />
                 <Route path = '/home/inicio' element={<Inicio/>} />
                 <Route path = '/home/contato' element={<Contato/>} />
                 <Route path = '/cliente/principal' element={<Principal/>} />
                 <Route path = '/Loginadmin' element={<LoginAdm />} />
                 <Route path = '/categoria' element={<Categoria />} />
-                <Route path = '/servico' element={<Servico />} />
+                <Route path = '/servico' element={<AdmServico />} />
                 <Route path = '/servico/lavagem' element={< Lavagem />} />
                 <Route path = '/servico/higienizacao' element={<Higienizacao />} />
                 <Route path = '/servico/renovacaopintura' element={<Renovacaopintura />} />
