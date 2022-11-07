@@ -116,12 +116,6 @@ export default function Index() {
             <Link to='/home/serviço'> <button className='botao1'> Voltar para Serviços </button> </Link>
 
             <br />
-
-
-               
-
-
-
             
         </main>
 

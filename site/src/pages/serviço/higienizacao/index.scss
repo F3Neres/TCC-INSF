@@ -7,8 +7,188 @@
         display: flex ;
         background-color: black;
         height: 19em;
-        width: 100em;
+        width: 98.5em;
+    }
+    
+    .t1{
+        color: white;
+        display: flex;
+        align-self: center;
+        font-size: 64px;
+        margin: 10em;
+        font-family: 'Iceland';
+    }
+
+    .faixa2{
+        display: flex ;
+        flex-direction: row;
+        height: 19em;
+        width: 94em;
+        margin: 3em;
+        margin-top: 4em;
+    }
+    .textos{
+        display: flex ;
+        flex-direction: column;
+        margin-left: 5em;
+
+    }
+    .t2{
+        margin-bottom: 1em;
+        font-family: 'Iceland';
+        font-size: 36px;
+    }
+
+    .p2{
+        font-family: 'Iceland';
+        font-size: 30px;
+    }
+    .p3{
+        font-family: 'Iceland';
+        font-size: 30px;
+        text-align: justify;
     }
 
 
+
+    .p4{
+        margin-top: 1em;
+        font-family: 'Iceland';
+        font-size: 32px;
+    }
+
+    .faixa3{
+        display: flex ;
+        flex-direction: row;
+        height: 23em;
+        width: 94em;
+        margin: 1em;
+        margin-left: 3em;
+        margin-top: 17em;
+        background-color: #c4c4c4;
+        border-radius: 3em;
+        
+    }
+    .textos2{
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 1em;
+        margin-top: -2em;
+
+    }
+    .t3{
+        margin-top: 3em;
+        font-family: 'Iceland';
+        font-size: 32px;
+    }
+
+    .p5{
+        font-weight:100 ;
+        font-family: 'Iceland';
+        font-size: 28px;
+        margin-top: 1em;
+    }
+
+    .img2{
+        margin-top: 3em;
+        margin-left: 3em;
+    }
+
+    .hr{
+        color: #9b9999;
+    }
+
+    .faixa4{
+
+        display: flex ;
+        flex-direction: row;
+        height: 23em;
+        width: 94em;
+        margin: 1em;
+        margin-left: 3em;
+        margin-top: 3em;
+        background-color: #c4c4c4;
+        border-radius: 3em;
+
+        
+    }
+    .textos3{
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 1em;
+        margin-top: -2em;
+
+    }
+    .t4{
+        margin-top: 3em;
+        font-family: 'Iceland';
+        font-size: 32px;
+    }
+
+    .p6{
+        font-weight:100 ;
+        font-family: 'Iceland';
+        font-size: 28px;
+        margin-top: 1em;
+    }
+
+    
+    .img3{
+        margin-top: 3em;
+        margin-left: 3em;
+    }
+
+    .faixa5{
+        display: flex ;
+        flex-direction: row;
+        height: 23em;
+        width: 94em;
+        margin: 1em;
+        margin-left: 3em;
+        margin-top: 3em;
+        background-color: #c4c4c4;
+        border-radius: 3em;
+        
+    }
+    .textos4{
+        display: flex ;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 1em;
+        margin-top: -2em;
+
+    }
+    .t5{
+        margin-top: 3em;
+        font-family: 'Iceland';
+        font-size: 32px;
+    }
+
+    .p7{
+        font-weight:100 ;
+        font-family: 'Iceland';
+        font-size: 28px;
+        margin-top: 1em;
+    }
+
+    .img4{
+        margin-top: 3em;
+        margin-left: 3em;
+    }
+
+    .botao1{
+        background-color: black;
+        color: #fff;
+        border-radius: 2em;
+        height: 3em;
+        width: 15em;
+        font-weight:700 ;
+        font-size: 18px;
+        align-self: flex-start;
+        margin-left: 3.5em;
+        margin-top: 3em;
+        
+    }
 }
