@@ -102,7 +102,6 @@ export default function Index() {
                     </tr>
                 </table>
 
-                <button className='botao1'> Pesquisar </button>
 
                 <table className='tabela2'>
 
