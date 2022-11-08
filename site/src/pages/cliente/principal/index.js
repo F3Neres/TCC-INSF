@@ -49,7 +49,7 @@ export default function Index() {
                     <h1 className='t3'> Higienização Interna</h1>
                     <img src={higienizações} alt="imagem" width="530px" height="298px" />
                     <div> 
-                        <button className='b2'><Link to='/descricao/higienizações'> SAIBA MAIS </Link></button>
+                        <button className='b2'><Link to='/descricao/higienizacoes'> SAIBA MAIS </Link></button>
                     </div>
                 </div>
 
@@ -57,7 +57,7 @@ export default function Index() {
                     <h1 className='t4'> Renovação de Pintura</h1>
                     <img src={renovaçãopintura} alt="imagem" width="530px" height="298px" />
                     <div> 
-                        <button className='b3'><Link to='/descricao/renovaçãopintura'> SAIBA MAIS </Link></button>  
+                        <button className='b3'><Link to='/descricao/renovacaopintura'> SAIBA MAIS </Link></button>  
                     </div>
                 </div>
 

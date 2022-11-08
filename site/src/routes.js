@@ -11,10 +11,9 @@ import Agenda from './pages/admin/agenda/index.js'
 //cliente
 import LoginCliente from './pages/cliente/login/index.js'
 import Cadastro from './pages/cliente/cadastro/index.js'
-import Descrição from './pages/cliente/descrição/index.js'
-import Descrição1 from './pages/cliente/descrição/higienizações/index.js'
-import Descrição2 from './pages/cliente/descrição/lavagens/index.js'
-import Descrição3 from './pages/cliente/descrição/renovaçãopintura/index.js'
+import Descricao1 from './pages/cliente/descricao/higienizacoes/index.js'
+import Descricao2 from './pages/cliente/descricao/lavagens/index.js'
+import Descricao3 from './pages/cliente/descricao/renovacaopintura/index.js'
 import Pagamento from './pages/cliente/pagamento/index.js'
 import Pedido from './pages/cliente/pedido/index.js'
 import Principal from './pages/cliente/principal/index.js'
@@ -52,10 +51,9 @@ export const Rotas = () =>{
                 <Route path = '/agenda' element={<Agenda />} />
                 <Route path = '/login/cliente' element={<LoginCliente />} />
                 <Route path = '/cadastro' element={<Cadastro/>} />
-                <Route path = '/descricao' element={<Descrição />} />
-                <Route path = '/descricao/higienizações' element={<Descrição1 />} />
-                <Route path = '/descricao/lavagens' element={<Descrição2 />} />
-                <Route path = '/descricao/renovaçãopintura' element={<Descrição3 />} />
+                <Route path = '/descricao/higienizacoes' element={<Descricao1 />} />
+                <Route path = '/descricao/lavagens' element={<Descricao2 />} />
+                <Route path = '/descricao/renovacaopintura' element={<Descricao3 />} />
                 <Route path = '/cliente/pagamento' element={<Pagamento />} />
                 <Route path = '/cliente/pedido' element={<Pedido/>} />
                 <Route path = '/cliente/principal' element={<Principal/>} />

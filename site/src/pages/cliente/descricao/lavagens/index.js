@@ -1,4 +1,4 @@
-
+import './index.scss';
 import '../../../common/index.scss'
 import { Link } from 'react-router-dom'
 import lavagem from '../../../../images/lavagens-servico.png'
@@ -68,6 +68,7 @@ export default function Index() {
                         <h1 className='t3'>Lavagem Simples</h1>
                         <hr />
                         <p  className='p5'> Lavagem com shampoo neutro e acabamento interno padrão de todas as lavagens.</p>
+                        <button className='b1'> Adicionar Serviço </button>
                     </div>
               
                 </div>
@@ -87,6 +88,7 @@ export default function Index() {
                         <h1 className='t4'>  Lavagem com resina</h1>
                         <hr />
                         <p  className='p6'> Finalidade: Brilho e proteção à pintura. A resina não é solúvel em água (a base de látex não sai com chuva) durando muito mais do que qualquer outra cera disponível no mercado.</p>
+                        <button className='b2'> Adicionar Serviço </button>
                     </div>
      
                 </div>
@@ -105,6 +107,7 @@ export default function Index() {
                         <h1 className='t5'>  Lavagem com brancol </h1>
                         <hr />
                         <p  className='p7'> Finalidade: Indicado para carro branco. O Brancol tem uma ação que remove manchas de “encardido” do branco, manchas de graxa. O carro sai o mais branco possível em uma lavagem.</p>
+                        <button className='b3'> Adicionar Serviço </button>
                     </div>
      
                 </div>
@@ -113,7 +116,7 @@ export default function Index() {
             </section>
 
 
-            <Link to='/home/serviço'> <button className='botao1'> Voltar para Serviços </button> </Link>
+            <Link to='/cliente/principal'> <button className='botao1'> Voltar para Página Principal </button> </Link>
 
             <br />
             

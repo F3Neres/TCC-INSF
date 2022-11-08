@@ -1,7 +1,6 @@
 import './index.scss';
 import '../../common/index.scss'
 import { Link } from 'react-router-dom'
-import logo from '../../../images/logo.png'
 import servico from '../../../images/serviço-home.png'
 import lavagem from '../../../images/lavagens-servico.png'
 import higienizações from '../../../images/higienizacao-servico.png'
@@ -26,7 +25,7 @@ export default function Index() {
             <section className='faixa-4'>
 
                 <div>
-                    <img src={lavagem} alt="imagem" width="530px" height="298px" />
+                    <img src={lavagem} alt="imagem" width="90%" height="50%" />
                     <h1 className='t1'> Lavagens</h1>
                     <p className='p1'> Acabamento Padrão, secagem, vidros,
                         <br></br> 
@@ -43,7 +42,7 @@ export default function Index() {
                 </div>
 
                 <div>
-                    <img src={higienizações} alt="imagem" width="530px" height="298px" />
+                    <img src={higienizações} alt="imagem" width="90%" height="50%"  />
                     <h1 className='t2'> Higienização Interna</h1>
                     <p className='p2'> Realizamos os serviços de limpeza interna
                         <br></br> 
@@ -57,7 +56,7 @@ export default function Index() {
                 </div>
 
                 <div>
-                    <img src={renovaçãopintura} alt="imagem" width="530px" height="298px" />
+                    <img src={renovaçãopintura} alt="imagem" width="90%" height="50%"  />
                     <h1 className='t3'> Renovação de Pintura</h1>
                     <p className='p3'> Para quem deseja manter seu carro com a
                         <br></br> 
