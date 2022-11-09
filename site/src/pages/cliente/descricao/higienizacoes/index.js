@@ -52,7 +52,7 @@ export default function Index() {
             </section>
 
     
-
+            <hr className='line'/>
             
             <br />
             

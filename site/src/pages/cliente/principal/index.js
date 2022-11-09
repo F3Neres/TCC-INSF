@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import lavagem from '../../../images/lavagens-servico.png'
 import higienizações from '../../../images/higienizacao-servico.png'
 import renovaçãopintura from '../../../images/renovacaopintura-servico.png'
+import recusar from '../../../images/xis.png'
 
 
 //IMPORTAÇÃO DE FONTE
@@ -33,7 +34,7 @@ export default function Index() {
             </section>
 
 
-            <section className='faixa-4'>
+            <section className='faixa-2'>
 
                 <div>
                     <h1 className='t2'> Lavagens</h1>
@@ -47,7 +48,7 @@ export default function Index() {
 
                 <div>
                     <h1 className='t3'> Higienização Interna</h1>
-                    <img src={higienizações} alt="imagem" width="530px" height="298px" />
+                    <img src={higienizações} alt="imagem" width="500px" height="298px" />
                     <div> 
                         <button className='b2'><Link to='/descricao/higienizacoes'> SAIBA MAIS </Link></button>
                     </div>
@@ -65,6 +66,55 @@ export default function Index() {
 
             </section>
 
+            <hr className='line'/>
+
+            <section className='faixa3'> 
+
+                <h1 className='t5'> SERVIÇOS ADICIONADOS </h1>
+
+            </section>
+
+            <div className='card'>  
+
+                <div className='head-card'>
+
+                    <h3>Serviço</h3>
+                    <h3>Valor</h3>
+                    <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
+
+                </div>
+                
+            </div>
+
+            <div className='card'>  
+
+                <div className='head-card'>
+
+                    <h3>Serviço</h3>
+                    <h3>Valor</h3>
+                    <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
+
+                </div>
+                
+            </div>
+
+            <div className='card'>  
+
+                <div className='head-card'>
+
+                    <h3>Serviço</h3>
+                    <h3>Valor</h3>
+                    <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
+
+                </div>
+                
+            </div>
+
+            <div className='botoes'>
+            <Link to='/cliente/pedido'> <button className='b4'>ACOMPANHAR PEDIDO </button> </Link>
+            <Link to='/cliente/pagamento'> <button className='b5'> PAGAR E AGENDAR </button> </Link>
+            </div>
+                        
         </main>
 
 

@@ -54,11 +54,10 @@ export default function Index() {
 
             </section>
 
-            
-            <br />
+            <hr className='line'/>
             
 
-                <section class='faixa3'>
+            <section class='faixa3'>
                 <div className='img2'>
                     <img src={lavagens} alt="imagem" width="355px" height="250"  />
                 </div>
@@ -116,7 +115,7 @@ export default function Index() {
             </section>
 
 
-            <Link to='/cliente/principal'> <button className='botao1'> Voltar para Página Principal </button> </Link>
+            <Link to='/cliente/principal'> <button className='botao1'> VOLTAR PARA PÁGINA PRINCIPAL</button> </Link>
 
             <br />
             

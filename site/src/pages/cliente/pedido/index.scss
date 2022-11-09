@@ -1,0 +1,108 @@
+.page-pedido{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    
+    .faixa1{
+        display: flex ;
+        background-color: black;
+        height: 19em;
+        width: 98.7em;
+    }
+    .t1{
+        color: white;
+        display: flex;
+        align-self: center;
+        font-size: 64px;
+        margin: 4em;
+        font-family: 'Iceland';
+    }
+
+    .faixa2{
+        display: flex ;
+        
+    }
+    .t2{
+        color: black;
+        display: flex;
+        align-self: center;
+        font-size: 50px;
+        margin-left: 13.5em;
+        margin-top: 2em;
+        font-family: 'Iceland';
+    }
+
+    .faixa3{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        align-items: center;
+    }
+    .card{
+        display: flex;
+        flex-direction: column;
+        background-color: #D9D9D9;
+        border-radius: 2em;
+        width: 90%;
+        padding: 1em;
+        color: black;
+        margin: 4em;
+        margin-left: 13em;
+    }
+
+    .head-card{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .line-card{
+        margin-top: 1em;
+        margin-bottom: 1em;
+        color: #000;
+        border: 1px solid #000;
+    }
+
+    .info-card{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #fff;
+        border-radius: 2em;
+        padding: 1em;
+    }
+
+    .info-text{
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+    }
+
+    .foot-card{
+        display: flex;
+        align-items: center;
+    }
+
+    .right-foot{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .xis{
+        opacity: 75%;
+    }
+
+    .botao1{
+        background-color: black;
+        color: #fff;
+        border-radius: 2em;
+        height: 3em;
+        width: 18em;
+        font-weight:700 ;
+        font-size: 15px;
+        align-self: flex-end;
+        margin-left: 80%;
+        margin-bottom: 2em;
+        
+    }
+}

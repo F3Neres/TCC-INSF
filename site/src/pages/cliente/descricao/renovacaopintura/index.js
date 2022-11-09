@@ -51,13 +51,10 @@ export default function Index() {
 
             </section>
 
-    
-
-            
-            <br />
+            <hr className='line'/>
             
 
-                <section class='faixa3'>
+            <section class='faixa3'>
                 <div className='img2'>
                     <img src={Enceramento } alt="imagem" width="355px" height="250"  />
                 </div>
