@@ -115,7 +115,7 @@ export default function Index() {
             </section>
 
 
-            <Link to='/cliente/principal'> <button className='botao1'> VOLTAR PARA PÁGINA PRINCIPAL</button> </Link>
+            <Link to='/cliente/principal'> <button className='botao1'> Voltar Para Página Principal</button> </Link>
 
             <br />
             

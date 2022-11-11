@@ -6,12 +6,92 @@
     
 
     .faixa-4{
-        display: flex ;
-        flex-direction : row ;
-        justify-content: space-evenly;
-        margin-top: 2em;
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
         
     }
 
+    .blocos-f4{
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        
+    }
 
+    .bloco1{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        align-items: flex-start;
+        margin-left: 5em;
+    }
+
+    .t1{
+        font-size: 1.7em;
+        align-items: flex-start;
+        margin: 2em;    
+
+    }
+    .texto{
+        margin-left: -4em;
+    }
+    .textos1{
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+        margin-bottom: 1em;
+        margin-left: -1em;
+
+    }
+
+    .p1{
+        margin-left: 0.2em;
+        font-size: 1.1em;
+        font-weight:400 ;
+    }
+    .p2{
+        margin-left: 0.8em;
+        font-size: 1.1em;
+        font-weight:400 ;
+    }
+
+    .textos2{
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+
+    }
+
+    .t2{
+        font-size: 1.7em;
+        align-items: flex-start;
+        margin: 2em;    
+
+    }
+
+    .textos3{
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        margin-bottom: 1em;
+        margin-left: 3.5em;
+
+    }
+
+    .p3{
+        margin-left: 0.8em;
+        font-size: 1.1em;
+        font-weight:700 ;
+    }
+    .p4{
+        margin-left: 0.8em;
+        font-size: 1.1em;
+        font-weight:700 ;
+    }
+    .p5{
+        margin-left: 0.8em;
+        font-size: 1.1em;
+        font-weight:700 ;
+    }
 }

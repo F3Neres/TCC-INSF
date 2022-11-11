@@ -16,7 +16,7 @@ export default function Lateral() {
 
     useEffect(() => {
         if (!storage('usuario-logado')) {
-            navigate('/Loginadmin')
+            navigate('/')
         }
         else{
             const usuarioLogado = storage('usuario-logado');
@@ -28,7 +28,7 @@ export default function Lateral() {
 
     function sairClick() {
         storage.remove('usuario-logado')
-        navigate('/Loginadmin')
+        navigate('/')
     }
 
     return(
