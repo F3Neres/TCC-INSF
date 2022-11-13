@@ -121,7 +121,6 @@
         background-color: #353434;
         display: flex ;
         flex-direction : column ;
-        height: 150vh;
         align-items: center;
         font-size: 1.5em;
         margin-top: 1.5em;
@@ -230,12 +229,28 @@
 
     }
 
-    .faixa-7{
-
+    .rodape{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        color: #ffff;
+        font-size: 1.2em;
+        margin-bottom: 2em;
     }
      
-    .hr{
+    .caixa-1{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    hr{
         color: #ffff;
+        width: 100%;
+        margin-top: 3em;
+        margin-bottom: 3em;
     }
 
 }

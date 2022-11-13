@@ -54,10 +54,10 @@ export default function Index() {
                 </div>    
             
 
-                 </section>  
+            </section>  
 
 
-                 <section className='faixa-5'>
+                <section className='faixa-5'>
                     
                     <div className='titulo'>
                     
@@ -71,7 +71,7 @@ export default function Index() {
                         <img src={combo4} alt="imagem" width="300em" height="300em" />
                     </div>
 
-                    <br/>
+                    <hr/>
 
                     
                     <div className='titulo2'>
@@ -104,20 +104,41 @@ export default function Index() {
                                 <p className='começo'>Desde o início, em 2007, nosso propósito sempre foi ir além da lavagem de veículos. Eu sabia que poderíamos chegar longe. Sempre acreditei que o que eu procurava como cliente (comprometimento, qualidade e excelência) seria o meu diferencial como empreendedor. No Premiere Lava-rápido, a qualidade é reconhecida nos detalhes e seu veículo é entendido como único. Aqui, você conta com uma gama de soluções em estética automotiva e garantimos o melhor serviço possível. Venha se surpreender com o nosso trabalho!
                                 Esperamos por você.</p>
                             </div>
-                        </div>
-
-                     
+                        </div>                  
 
                     </div>
 
-          
-
-                
-
-               </section>
+                </section>
            
+               <hr/>
 
-                          
+                <section className='rodape'>
+                    
+                    <div className='caixa-1'>
+                        <p>O GORILACARDENAIL tem como objetivo atender da melhor forma possível
+                             seus clientes, buscando todas as soluções em estética automotiva 
+                             focando sempre na qualidade e fidelização de seus clientes.</p>
+                    </div>
+
+                    <div className='caixa-1'>
+                        <h2>Links</h2>
+                        <p>Fale Conosco</p>
+                        <p>Serviços</p>
+                    </div>
+
+                    <div className='caixa-1'>
+                        <h2>Onde Estamos?</h2>
+                        <h2>R. Café Natal,235 - Vila Natal - São Paulo - SP  </h2>
+                        <h2>Segunda a Sexta: 9h às 18hDomingo: FechadoSabados:8h às 13h</h2>
+                    </div>
+
+                    <div className='caixa-1'>
+                        <h2>Contatos</h2>
+                        <h2>(11) 98765-5431</h2>
+                    </div>
+
+
+                </section>    
  
 
          

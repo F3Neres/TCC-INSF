@@ -39,9 +39,9 @@ export default function Index() {
                     <h3> CLIENTE </h3>
                 </div>
 
-
-
             </section>
+
+            
 
 
             
