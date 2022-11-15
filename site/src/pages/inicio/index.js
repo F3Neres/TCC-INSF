@@ -3,7 +3,9 @@
 
 //import storage from 'local-storage'
 //import LoadingBar from 'react-top-loading-bar'
-//import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
+
+import storage from 'local-storage'
 
 import '../common/index.scss'
 import './index.scss'
@@ -15,6 +17,13 @@ import adm from '../../images/adm.png'
 import cliente from '../../images/cliente.png'
 
 export default function Index() {
+
+    useEffect(() => {
+        if (storage('usuario-logado')){
+            storage.remove('usuario-logado')
+            // endereço temporario
+        }
+    })
     
 
     return(
@@ -22,6 +31,7 @@ export default function Index() {
         <main className='inicio-adm'>
 
             <section className ='principal'>
+            <Link className="links" to="/"><button className='botao '> Voltar</button></Link>
 
                 <div className ='entradas'>
 
@@ -35,8 +45,6 @@ export default function Index() {
 
                 </div>
 
-
-                <Link className="links" to="/"><button className='botao '> Voltar</button></Link>
 
             </section> 
 

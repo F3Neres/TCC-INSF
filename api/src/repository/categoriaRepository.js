@@ -16,7 +16,7 @@ export async function imagemCategoria(imagem, id){
     const comando = 
     `UPDATE tb_categoria
         SET img_categoria        = ?
-      WHERE id_categoria         = ?`
+      WHERE id_categoria         = ?`;
 
       const [resposta] = await con.query(comando, [imagem, id]);
       return resposta.affectedRows

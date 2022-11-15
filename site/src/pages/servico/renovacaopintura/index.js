@@ -27,13 +27,13 @@ export default function Index() {
             <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></Link>
             <Link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet"></Link>
 
-            <section class='faixa1'>
+            <section className='faixa1'>
 
-                <h1 class='t1'> RENOVAÇÃO DA PINTURA </h1>
+                <h1 className='t1'> RENOVAÇÃO DA PINTURA </h1>
 
             </section>
 
-            <section class='faixa2'>
+            <section className='faixa2'>
                 
                 <div className='imagem1'> 
                     <img src={RenovacaoPintura} alt="imagem" width="654px" height="395px" />
@@ -57,7 +57,7 @@ export default function Index() {
             <br />
             
 
-                <section class='faixa3'>
+                <section className='faixa3'>
                 <div className='img2'>
                     <img src={Enceramento } alt="imagem" width="355px" height="250"  />
                 </div>

@@ -1,0 +1,81 @@
+.cadastroCliente{
+
+    background-image: url('../../../images/login-back.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 100%; 
+
+    .botao{
+        margin: 1em;
+        width: 8em;
+        height: 2.5em;
+        border-radius: 1em;
+        font-weight: 600;
+        font-size: 1em;    
+    }
+
+    .botao-right{
+        align-self: flex-end;
+        justify-self: flex-end;
+        padding: 0.3em;
+        border-radius: 1em;
+        font-weight: 550;
+        font-size: 1.2em;
+
+    }
+
+    .principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2vh;
+    }
+
+    .cadastro{
+        display: flex;
+        flex-direction: column;
+        padding: 1em;
+        background-color: #1D1919;
+        border-radius: 1.5vh;
+        width: 80vw;
+        height: 75vh;
+        opacity: 90%;
+        color: #fff;
+
+    }
+
+    .meio{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .left{
+        display: flex;
+        flex-direction: column;
+        margin: 1em;
+        width: 50%;
+    }
+    .right{
+        display: flex;
+        flex-direction: column;
+        margin: 1em;
+        width: 50%;
+    }
+
+    h2{
+        margin-top: 0.5em;
+        margin-bottom: 1em;
+        font-weight: 550;
+    }
+
+    input{
+        background-color: inherit;
+        border: inherit;
+        width: 100%;
+        color: #fff;
+        font-size: 1.5em;
+    }
+
+
+
+}

@@ -18,7 +18,7 @@ export async function imagemServico(id, imagem){
     const formData = new FormData();
     formData.append('capa', imagem);
 
-    const resposta = await api.put(`/servico/$${id}/capa`, formData, {
+    const resposta = await api.put(`/servico/${id}/imagem`, formData, {
         headers: {
             "content-Type": "multipart/form-data"
         },

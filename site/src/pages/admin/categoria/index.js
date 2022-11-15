@@ -14,11 +14,12 @@ export default function Index() {
 
     const [nome, setNome] = useState('');
     const [descricao, setDescricao] = useState('');
-    const [imagem, setImagem] = useState('');
+    const [imagem, setImagem] = useState();
 
     async function salvarCLick(){
         try {
-            const r = await cadastrarCategoria(nome, descricao)
+            const novaCategoria = await cadastrarCategoria(nome, descricao);
+            const r = await imagemCategoria(novaCategoria.id, imagem);
 
             alert('Categoria cadastrada');
         } catch (err) {
@@ -27,6 +28,13 @@ export default function Index() {
 
     }
 
+    function escolherImagem() {
+        document.getElementById('caixa-file').click();
+    }
+
+    function mostrarImagem(){
+        return URL.createObjectURL(imagem)
+    }
     
 
     // useEffect(() => {
@@ -63,9 +71,20 @@ export default function Index() {
 
                     <div className='direita'>
 
-                        <div className='imagem'>
+                        <div className='imagem' onClick={escolherImagem}>
                             <h2>Imagem</h2>
-                            <div className = 'img'>   <input className= 'caixa-img' type = "image"/> </div>
+
+                            <div className = 'img'>
+                                {!imagem &&
+                                    <input className= 'caixa-img' type = "image"/> 
+                                }
+                                {imagem &&
+                                    <img className='mImagem' src={mostrarImagem()} alt=''/>
+                                }
+                                
+                                <input type ="file" id ='caixa-file' onChange={e => setImagem(e.target.files[0])} />
+                             
+                             </div>
                         </div>
 
                         <button onClick={salvarCLick}>CADASTRAR CATEGORIA</button>

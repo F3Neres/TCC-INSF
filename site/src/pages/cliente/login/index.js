@@ -1,4 +1,4 @@
-import { login } from '../../../api/loginAdm.js'
+import { logar } from '../../../api/loginCliente.js'
 import { useNavigate } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
@@ -30,9 +30,11 @@ export default function Index() {
         setCarregando(true);
 
         try{
-            const r = await login(email, senha);
+            const r = await logar(email, senha);
 
             storage('usuario-logado', r);
+
+            alert('Usuario logado')
 
             setTimeout(() => {
                 navigate('/cliente/principal');
@@ -64,12 +66,16 @@ export default function Index() {
                 <div className ='login'>
                     
 
-                    <h1>LOGAR NO SISTEMA</h1>
+                    <h1>LOGAR NA LOJA</h1>
+
                     <h3>EMAIL:</h3>
                     <input class="box" type="text" value={email} onChange={e => setEmail(e.target.value)}/>
+
                     <h3>SENHA:</h3>
                     <input class="box" type="password" value={senha} onChange={e => setSenha(e.target.value)}/>
+
                     <h4 className='erro'>{erro}</h4>
+
                     <button className='botaoLogin' onClick={entrarClick} disabled={carregando}>ENTRAR</button>
                     <Link className="LinkCad" to="/cadastro"><button className='botaoCadastro '> CADASTRAR</button></Link>
                 </div>

@@ -16,7 +16,7 @@ export async function imagemCategoria(id, imagem){
     const formData = new FormData();
     formData.append('capa', imagem);
 
-    const resposta = await api.put(`/categoria/$${id}/capa`, formData, {
+    const resposta = await api.put(`/categoria/${id}/imagem`, formData, {
         headers: {
             "content-Type": "multipart/form-data"
         },

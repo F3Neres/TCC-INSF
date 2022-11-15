@@ -34,8 +34,8 @@ export default function Index() {
     const Salvar =  async () => {
         try {
 
-            const r = await cadastrarServico(idCategoria, nome, descricao, valor);
-
+            const novoSevico = await cadastrarServico(idCategoria, nome, descricao, valor);
+            const r = await imagemServico(novoSevico.id, imagem)
             NovoServico();
 
             alert('Serviço cadastrado');
@@ -45,19 +45,27 @@ export default function Index() {
         };
     };
 
+    function escolherImagem() {
+        document.getElementById('caixa-file').click();
+    }
+
+    function mostrarImagem(){
+        return URL.createObjectURL(imagem)
+    }
+
     
     useEffect(()=>{
         Categoria();
     },  []);
 
     
-    const uploadImage = async e => {
+    // const uploadImage = async e => {
 
-        e.preventDefault();
+    //     e.preventDefault();
 
-        const formData = new FormData();
-        formData.append('imagem', imagem);
-    }
+    //     const formData = new FormData();
+    //     formData.append('imagem', imagem);
+    // }
 
 
     return(
@@ -102,7 +110,18 @@ export default function Index() {
 
                         <div className='imagem'>
                             <h2>Imagem</h2>
-                            <div className = 'img'>   <input className= 'caixa-img' type = "image"/> </div>
+                            <div className = 'img'>
+
+                            {!imagem &&
+                                    <input className= 'caixa-img' type = "image"/> 
+                                }
+                                {imagem &&
+                                    <img className='mImagem' src={mostrarImagem()} alt=''/>
+                                }
+                                
+                                <input type ="file" id ='caixa-file' onChange={e => setImagem(e.target.files[0])} />
+
+                            </div>
                         </div>
 
                         <button onClick={Salvar}>CADASTRAR SERVIÇO</button>
