@@ -52,7 +52,7 @@ export default function Index() {
                                 <h1 className='t2'> HORÁRIO DE FUNCIONAMENTO </h1>
                             </div>
                             <div className='textos3'>
-                                <p className='p3'> <font color="darkblack">De Segunda a Sexta: </font>9h ás 18h</p>
+                                <p className='p3'> De Segunda a Sexta: 9h ás 18h</p>
                                 <p className='p4'> Domingo: Fechado </p>
                                 <p className='p5'> Sabados: 8h ás 13h</p>
                             </div>
@@ -62,6 +62,8 @@ export default function Index() {
                     </div>
 
                 </section>
+
+               
                                 
 
             
