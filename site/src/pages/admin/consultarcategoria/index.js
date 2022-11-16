@@ -12,6 +12,7 @@ import { listarCategoria, removerCategoria, buscarServicoNome, buscarCategoriaNo
 export default function Index() {
 
     const [categorias, setCategorias] = useState([]);
+    const [servicos, setServicos] = useState([]);
     const [filtroServico, setFiltroServico] = useState('');
     const [filtroCategoria, setFiltroCategoria] = useState('');
     const [filtroValor, setFiltroValor] = useState( );
@@ -58,7 +59,7 @@ export default function Index() {
 
 
     useEffect(() => {
-        carregarServicos();
+        carregarCategorias();
     }, []);
 
     async function deletarCategoria(id){
