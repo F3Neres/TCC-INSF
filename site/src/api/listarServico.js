@@ -8,8 +8,18 @@ export async function listarServico(){
     return resposta.data
 }
 
+export async function listarCategoria(){
+    const resposta = await api.get('/listarCategoria');
+    return resposta.data
+}
+
 export async function removerServico(id){
     const resposta = await api.delete('/removerServico/' + id);
+    return resposta.data
+}
+
+export async function removerCategoria(id){
+    const resposta = await api.delete('/removerCategoria/' + id);
     return resposta.data
 }
 

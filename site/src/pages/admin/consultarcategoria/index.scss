@@ -1,0 +1,159 @@
+.consultar{
+
+    display: flex;
+    flex-direction: row;
+    
+    
+
+    .esquerda{
+        background-color: #000000;
+        width: 25vh;
+        height: 100vh;
+        color: #fff;
+    }
+
+    h3{
+        margin: 1.5em;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        font-weight: 400;
+    }
+
+    .meio{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;    
+    }
+
+    
+
+    .cabecalho{
+        display: flex;
+        align-self: center;
+        margin: 2em;
+
+    }
+
+    h1{
+        font-weight: 450;
+    }
+
+
+    .tabela1{
+        background-color: #EDEDED;
+        height: 20vh;
+        margin-top: 1em;
+        margin-left: 2em;
+        margin-bottom: 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-right: 35em;
+        width: 90%;
+
+    }
+
+    .caixa1{
+        margin-left: 10em;
+        
+    }
+
+    .linha1{
+        font-size: 1.2em;
+        color: black;
+        background-color: #D9D9D9;
+        width: 95%;
+        display: flex;
+    }
+   
+    
+
+
+    .linha2{
+        font-size: 1.2em;
+        color: black;
+        background-color: #D9D9D9;
+        width: 95%;
+        align-items: center;
+    }
+
+    .linha3{
+        font-size: 1.2em;
+        color: black;
+        background-color: #D9D9D9;
+        width: 95%;
+    }
+
+    .linha4{
+        color: white;
+        background-color: #4B4B4B;
+        width: 99%;
+        margin-left: 10px;
+        margin-top: 10px;
+       
+    }
+
+
+
+    .botao1{
+        color: #fff;
+        background-color: #1E1ACD;
+        height: 29px;
+        width: 114px;
+        margin-bottom: 5vh;
+        margin-top: 5vh;
+        align-self: center;
+        font-size: 15px;
+        border-radius: 5px;
+    }
+
+    button:active{
+        color: #fff;
+        background-color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+
+    .tabela2{
+        background-color: #EDEDED;
+        width: 90%;
+        margin-left: 2em;
+        min-height: 200px;
+        border-collapse: collapse;
+        text-align: center;
+        
+    }
+
+    .botao2{
+        color: #fff;
+        background-color: #F80404;
+        height: 27px;
+        width: 69px;
+        margin-bottom: 0;
+        margin-top: 1em;
+        margin-left: 2em;
+        font-size: 15px;
+        border-radius: 5px;
+
+    }
+
+    .pag-centro{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color:#8E8D8D;
+        color: #fff;
+
+    }
+
+    tbody{
+        color: #000000;
+        overflow: auto;
+    }
+
+    tbody tr:hover {
+        background-color: #e1e1e1;
+    }
+
+}

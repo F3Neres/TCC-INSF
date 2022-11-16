@@ -31,3 +31,14 @@ export async function listarCategoria () {
     const [linhas] =await con.query(comando);
     return linhas
 };
+
+export async function removerCategoria(idCategoria){
+    const comando = `
+        delete from tb_categoria
+              where id_categoria = ?
+    `
+
+    const {resp} =  await con.query(comando, [idCategoria])
+    return resp
+}
+

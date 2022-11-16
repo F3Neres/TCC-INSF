@@ -1,5 +1,5 @@
 
-import { imagemCategoria, inserirCategoria, listarCategoria } from "../repository/categoriaRepository.js";
+import { imagemCategoria, inserirCategoria, listarCategoria, removerCategoria } from "../repository/categoriaRepository.js";
 
 import multer from 'multer'
 
@@ -62,5 +62,19 @@ server.get('/listarCategoria', async (req, resp) => {
     }
 })
 
+server.delete('/removerCategoria/:id', async (req, resp)=> {
+    try {
+        const id =  req.params.id;
+
+        await removerCategoria(id);
+
+        resp.status(200).send();
+
+    } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
 
 export default server;

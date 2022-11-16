@@ -42,7 +42,9 @@ export default function Lateral() {
                     <hr/>
                     <Link className="links" to="/servico"> Serviço </Link>
                     <hr/>
-                    <Link className="links" to="/consultar"> Consultar </Link>
+                    <Link className="links" to="/consultar"> Consultar Serviço</Link>
+                    <hr/>
+                    <Link className="links" to="/consultarcategoria"> Consultar Categoria </Link>
                     <hr/>
                     <Link className="links" to="/agenda"> Agenda </Link>
                     <hr/>

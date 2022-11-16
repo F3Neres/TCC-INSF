@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Route } from 'react-router-dom';
 import LoginAdm from './pages/admin/login/index.js'
 import Categoria from './pages/admin/categoria/index.js'
 import Consultar from './pages/admin/consultar/index.js'
+import ConsultarCategoria from './pages/admin/consultarcategoria/index.js'
 import Home from './pages/admin/home/index.js'
 import AdmServico from './pages/admin/servico/index.js'
 import Agenda from './pages/admin/agenda/index.js'
@@ -47,6 +48,7 @@ export const Rotas = () =>{
                 <Route path = '/servico/higienizacao' element={<Higienizacao />} />
                 <Route path = '/servico/renovacaopintura' element={<Renovacaopintura />} />
                 <Route path = '/consultar' element={<Consultar />} />
+                <Route path = 'consultarcategoria' element={<ConsultarCategoria/>} />
                 <Route path = '/homeadmin' element={<Home />} />
                 <Route path = '/agenda' element={<Agenda />} />
                 <Route path = '/login/cliente' element={<LoginCliente />} />
