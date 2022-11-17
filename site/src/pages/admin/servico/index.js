@@ -108,11 +108,11 @@ export default function Index() {
 
                     <div className='direita'>
 
-                        <div className='imagem'>
+                    <div className='imagem' onClick={escolherImagem}>
                             <h2>Imagem</h2>
-                            <div className = 'img'>
 
-                            {!imagem &&
+                            <div className = 'img'>
+                                {!imagem &&
                                     <input className= 'caixa-img' type = "image"/> 
                                 }
                                 {imagem &&
@@ -120,8 +120,8 @@ export default function Index() {
                                 }
                                 
                                 <input type ="file" id ='caixa-file' onChange={e => setImagem(e.target.files[0])} />
-
-                            </div>
+                             
+                             </div>
                         </div>
 
                         <button onClick={Salvar}>CADASTRAR SERVIÇO</button>

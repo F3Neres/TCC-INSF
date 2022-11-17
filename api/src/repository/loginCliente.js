@@ -13,3 +13,24 @@ export async function clienteLogin(email, senha){
     const [registros] = await con.query(comando, [email, senha]);
     return registros[0]
 }
+
+export async function cadastrarCliente(cliente){
+    const comando = 
+        `INSERT INTO tb_usuario (nm_usuario, ds_cpf, ds_telefone, nm_apelido )
+            VALUES (?, ?, ?, ?);`
+    const [resposta] = await con.query(comando, [cliente.nome, cliente.cpf, cliente.telefone, cliente.apelido]);
+    cliente.id = resposta.insertId;
+
+    return cliente
+}
+
+export async function cadastrarLogin(login){
+    const comando = 
+        `INSERT INTO tb_login_usuario (id_usuario, ds_email, ds_senha )
+                        VALUES (?, ?, ?);`
+    const [resposta] = await con.query(comando, [login.usuario, login.email, login.senha]);
+    login.id = resposta.insertId;
+
+    return login
+
+}

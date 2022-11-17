@@ -50,7 +50,7 @@ export default function Lateral() {
                     <hr/>
                 </div>
                 <div>
-                    <button onClick={sairClick}>Sair</button>
+                    <button className='sair' onClick={sairClick}>Sair</button>
                 </div>
             </div>
 

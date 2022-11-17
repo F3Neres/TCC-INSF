@@ -3,10 +3,15 @@ import 'dotenv/config'
 import adminController from './controller/adminController.js'
 import categoriaController from './controller/categoriaController.js'
 import servicoController from './controller/servicoController.js'
+
 import loginCliente from './controller/loginCliente.js'
+import cadastrarCliente from './controller/loginCliente.js'
+import cadastrarLogin from './controller/loginCliente.js'
 
 import express from 'express'
 import cors from 'cors'
+
+
 
 const server = express();
 server.use(cors());
@@ -20,7 +25,10 @@ server.use('/storage/image', express.static('storage/image'));
 server.use(adminController);
 server.use(categoriaController);
 server.use(servicoController);
+
 server.use(loginCliente);
+server.use(cadastrarCliente);
+server.use(cadastrarLogin);
 
 
 

@@ -118,8 +118,9 @@
     .tabela2{
         background-color: #EDEDED;
         width: 90%;
+        height: 5em;
         margin-left: 2em;
-        min-height: 200px;
+        height: 1em;
         border-collapse: collapse;
         text-align: center;
         
@@ -145,6 +146,10 @@
         background-color:#8E8D8D;
         color: #fff;
 
+    }
+
+    tbody{
+        overflow-y: scroll ;
     }
 
     tbody{
