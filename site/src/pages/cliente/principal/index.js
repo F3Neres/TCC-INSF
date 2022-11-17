@@ -36,31 +36,31 @@ export default function Index() {
 
             <section className='faixa-2'>
 
-                <div>
+                <div className='caixa'>
                     <h1 className='t2'> Lavagens</h1>
-                    <img src={lavagem} alt="imagem" width="530px" height="298px" />
-                    <div> 
-                        <button className='b1'><Link to='/descricao/lavagens'> SAIBA MAIS </Link></button>
-                    </div>
-                        
+                    <img src={lavagem} alt="imagem" width="85%" height="75%" />
+                    
+                    <button className='b1'><Link to='/descricao/lavagens'> SAIBA MAIS  ➤</Link></button>                                                           
+                </div>
+
+                <div className='caixa'>
+                    <h1 className='t2'> Higienização Interna</h1>
+                    <img src={higienizações} alt="imagem" width="85%" height="75%" />
+                    
+                    <button className='b1'><Link to='/descricao/higienizacoes'> SAIBA MAIS </Link></button>
                     
                 </div>
 
-                <div>
-                    <h1 className='t3'> Higienização Interna</h1>
-                    <img src={higienizações} alt="imagem" width="500px" height="298px" />
-                    <div> 
-                        <button className='b2'><Link to='/descricao/higienizacoes'> SAIBA MAIS </Link></button>
-                    </div>
+                <div className='caixa'>
+                    <h1 className='t2'> Renovação de Pintura</h1>
+                    <img src={renovaçãopintura} alt="imagem" width="85%" height="75%" />
+                
+                    <button className='b1'><Link to='/descricao/renovacaopintura'> SAIBA MAIS </Link></button>  
+                  
                 </div>
+                
 
-                <div>
-                    <h1 className='t4'> Renovação de Pintura</h1>
-                    <img src={renovaçãopintura} alt="imagem" width="530px" height="298px" />
-                    <div> 
-                        <button className='b3'><Link to='/descricao/renovacaopintura'> SAIBA MAIS </Link></button>  
-                    </div>
-                </div>
+                
 
                 
 
@@ -68,52 +68,54 @@ export default function Index() {
 
             <hr className='line'/>
 
-            <section className='faixa3'> 
+            <section className='faixa-3'> 
 
                 <h1 className='t5'> SERVIÇOS ADICIONADOS </h1>
 
+                
+
+                <div className='card'>  
+
+                    <div className='head-card'>
+
+                        <h3>Serviço</h3>
+                        <h3>Valor</h3>
+                        <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
+
+                    </div>
+                    
+                </div>
+
+                <div className='card'>  
+
+                    <div className='head-card'>
+
+                        <h3>Serviço</h3>
+                        <h3>Valor</h3>
+                        <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
+
+                    </div>
+                    
+                </div>
+
+                <div className='card'>  
+
+                    <div className='head-card'>
+
+                        <h3>Serviço</h3>
+                        <h3>Valor</h3>
+                        <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
+
+                    </div>
+                    
+                </div>
+
+                <div className='botoes'>
+                    <Link to='/cliente/pedido'> <button className='b4'>ACOMPANHAR PEDIDO </button> </Link>
+                    <Link to='/cliente/pagamento'> <button className='b5'> PAGAR E AGENDAR </button> </Link>
+                </div>
+
             </section>
-
-            <div className='card'>  
-
-                <div className='head-card'>
-
-                    <h3>Serviço</h3>
-                    <h3>Valor</h3>
-                    <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
-
-                </div>
-                
-            </div>
-
-            <div className='card'>  
-
-                <div className='head-card'>
-
-                    <h3>Serviço</h3>
-                    <h3>Valor</h3>
-                    <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
-
-                </div>
-                
-            </div>
-
-            <div className='card'>  
-
-                <div className='head-card'>
-
-                    <h3>Serviço</h3>
-                    <h3>Valor</h3>
-                    <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
-
-                </div>
-                
-            </div>
-
-            <div className='botoes'>
-            <Link to='/cliente/pedido'> <button className='b4'>ACOMPANHAR PEDIDO </button> </Link>
-            <Link to='/cliente/pagamento'> <button className='b5'> PAGAR E AGENDAR </button> </Link>
-            </div>
                         
         </main>
 

@@ -2,7 +2,6 @@ create database gorilaDB;
 use gorilaDB;
 
 
-
 create table tb_adm(
 	id_adm 					int primary key auto_increment,
     nm_adm		   			varchar(200) not null,
@@ -24,10 +23,16 @@ create table tb_usuario(
 create table tb_login_usuario(
 	id_login_usuario 		int primary key auto_increment,
     id_usuario				int,
-    ds_email      	 		varchar(100),
-    ds_senha       			varchar(50),
+    ds_email      	 		varchar(800),
+    ds_senha       			varchar(800),
+    bt_trocar				boolean,
+    cod_reset				varchar(20),
+    dt_expiracao_cod		datetime,
     foreign key (id_usuario) references tb_usuario(id_usuario)
 );
+
+INSERT INTO tb_login_usuario (id_usuario, ds_email, ds_senha )
+                VALUES (2, "mari@gmail.com", "1234");
 
 create table tb_categoria(
 	id_categoria			int primary key auto_increment,
