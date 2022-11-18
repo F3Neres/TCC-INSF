@@ -45,15 +45,13 @@ export default function Index() {
 
 
     async function deletarCategoria(id){
-        ref.current.continuousStart()
         try {
             await removerCategoria(id);
             carregarCategorias();
             alert('Categoria removido');
 
         } catch(err){
-            ref.current.complete();
-            setCarregando(false);
+
 
             if (err.response.status === 401) {
                 setErro(err.response.data.erro);
@@ -61,11 +59,10 @@ export default function Index() {
         }
     }
 
-
     return(
 
         <main className='consultar'>
-            <LoadingBar color='#ff0000' ref={ ref }/>
+
 
             <Lateral />
 
@@ -92,7 +89,7 @@ export default function Index() {
                         <tr className='linha4'>
                             <td className='id'> ID </td>
                             <td> Categoria </td>
-
+                            <td></td>
                         </tr>
                     </thead>
 

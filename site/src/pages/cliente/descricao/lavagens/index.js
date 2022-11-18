@@ -1,10 +1,21 @@
 import './index.scss';
 import '../../../common/index.scss'
+
 import { Link } from 'react-router-dom'
+
+import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+
+import storage from 'local-storage';
+
 import lavagem from '../../../../images/lavagens-servico.png'
 import lavagens from '../../../../images/img-lavagens.png'
 import lavagens2 from '../../../../images/img-lavagens2.png'
 import lavagens3 from '../../../../images/img-lavagens3.png'
+import { buscarCategoriaPorId, servicoPorIdCategoria } from '../../../../api/categoriaCliente.js';
+import { API_URL } from '../../../../api/config.js';
+
 
 
 //IMPORTAÇÃO DE FONTE
@@ -18,101 +29,147 @@ import lavagens3 from '../../../../images/img-lavagens3.png'
 
 export default function Index() {
 
+    const [usuario, setUsuario] = useState('-');
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        if (!storage('usuario-logado')) {
+            navigate('/home/inicio')
+        }
+        else{
+            const usuarioLogado = storage('usuario-logado');
+            setUsuario(usuarioLogado.apelido);
+        }
+    }, [])
+
+
+    function sairClick() {
+        storage.remove('usuario-logado')
+        navigate('/home/inicio')
+    }
+
+    const [categoria, setCategoria] = useState({info: {}});
+    const [servico, setServico] = useState([])
+
+    const { id, idS } = useParams();
+
+
+    async function carregarPagina(){
+        const r = await buscarCategoriaPorId(id)
+        setCategoria(r)
+    }
+
+    async function carregarServico(){
+        const r = await servicoPorIdCategoria(id)
+        setServico(r)
+
+    }
+
+
+    useEffect(() => {
+        carregarPagina();
+        carregarServico();
+    }, [])
+
+    function exibir(imagem) {
+        if (!imagem)
+            return `{lavagem}`;
+        else 
+            return `${API_URL}/${imagem}`
+    }
+
+
+    function adicionarCarrinho(){
+        let carrinho = []
+        console.log(idS)
+        if (storage('carrinho')){
+            carrinho = storage('carrinho')
+        }
+        if(!carrinho.find(item => item.idS === item.idS)){
+            carrinho.push({
+                id: idS,
+                qtd: 1
+            })
+            storage ('carrinho', carrinho)
+        }
+    }
+       
+
+
+
+
+
     return (
 
         
         <main className='page-lavagem'>
             
-            <Link rel="preconnect" href="https://fonts.googleapis.com"></Link>
-            <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></Link>
-            <Link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet"></Link>
 
             <section class='faixa1'>
 
-                <h1 class='t1'> LAVAGENS </h1>
+                <div className='user'>            
+                    <h3 className='nome'>Bem vindo(a) {usuario}</h3>
+                    <button className='sair' onClick={sairClick}>Sair</button>
+                </div>
+
+                <div className='titulo'>
+                    <h1 class='t1'> {categoria.info.categoria}  </h1>
+                </div>
 
             </section>
 
-            <section class='faixa2'>
-                
-                <div className='imagem1'> 
-                    <img src={lavagem} alt="imagem" width="654px" height="395px" />
-                </div>
-                
-                <div className='textos'>
-                    <h1 className='t2'>Acabamento padrão em todas as lavagens. </h1>
 
-                    <p className='p2'> Em todas as lavagens realizadas o acabamento é padrão.</p>
-                        <br></br>
-                    <p className='p3'>  Secagem, Vidros, Pretinho nos pneus. Aspiração, Biodiesel nos para-barros, Cantos de portas, Limpeza de painéis e Silicone.
-                        Diferencia-se apenas no processo de lavagem onde alguns produtos são acrescentados.</p>
-                       
-                    <p className='p4'> As lavagem são feitas com shampoo a base de cera de carnauba,ecologicamente correto e nao agride o meio ambiente.</p>
+            <section className='faixa2'>
+
+                <div className='imgC'>
+
+                    <img src={exibir(categoria.info.imagem)} alt="imagem" width="99%" height="99%" />
+
                 </div>
-           
-                
+
+                <div className='txtC'>
+
+
+                    <p className='p1'> {categoria.info.descricao}</p>
+
+                </div>
+
 
             </section>
+
+
+
+
+
 
             <hr className='line'/>
-            
 
             <section class='faixa3'>
-                <div className='img2'>
-                    <img src={lavagens} alt="imagem" width="355px" height="250"  />
-                </div>
-                <div className='textos2'>
 
-                    <div>
-                        <h1 className='t3'>Lavagem Simples</h1>
-                        <hr />
-                        <p  className='p5'> Lavagem com shampoo neutro e acabamento interno padrão de todas as lavagens.</p>
-                        <button className='b1'> Adicionar Serviço </button>
+                {servico.map(item =>
+                <div className='card'>
+                    <div className='card-meio' >
+                        <div className='imagem'> 
+                            <img src={exibir(item.imagem)} alt="imagem" width="99%" height="99%" />
+                        </div>
+                        
+                        <div className='textos'>
+                            <h1 className='t2'>{item.idS}</h1>
+                            
+                            <hr className='line'/>
+
+                            <p className='p2'>{item.descricao}</p>
+                                        
+                        </div>
                     </div>
-              
+
+                     <button className='b1' onClick={adicionarCarrinho}> Adicionar Serviço </button>
                 </div>
-           
-                
-
-            </section>
-
-            <section class='faixa4'>
-
-                <div className='img3'>
-                    <img src={lavagens2} alt="imagem" width="355px" height="250"  />
-                </div>
-                <div className='textos3'>
-
-                    <div>
-                        <h1 className='t4'>  Lavagem com resina</h1>
-                        <hr />
-                        <p  className='p6'> Finalidade: Brilho e proteção à pintura. A resina não é solúvel em água (a base de látex não sai com chuva) durando muito mais do que qualquer outra cera disponível no mercado.</p>
-                        <button className='b2'> Adicionar Serviço </button>
-                    </div>
-     
-                </div>
+                )}
 
 
             </section>
 
-            <section class='faixa5'>
-                
-                <div className='img4'>
-                    <img src={lavagens3} alt="imagem" width="355px" height="250"  />
-                </div>
-                <div className='textos4'>
-
-                    <div>
-                        <h1 className='t5'>  Lavagem com brancol </h1>
-                        <hr />
-                        <p  className='p7'> Finalidade: Indicado para carro branco. O Brancol tem uma ação que remove manchas de “encardido” do branco, manchas de graxa. O carro sai o mais branco possível em uma lavagem.</p>
-                        <button className='b3'> Adicionar Serviço </button>
-                    </div>
-     
-                </div>
-
-
-            </section>
 
 
             <Link to='/cliente/principal'> <button className='botao1'> Voltar Para Página Principal</button> </Link>

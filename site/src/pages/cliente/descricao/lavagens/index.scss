@@ -5,233 +5,172 @@
     
     .faixa1{
         display: flex ;
+        flex-direction: column;
         background-color: black;
-        height: 19em;
-        width: 98.5em;
+        height: 15em;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2em;
+
     }
-    
+
+    .user{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 1em;
+        padding-left: 1em;
+    }
+
+    .nome{
+        color: #fff;
+        margin-bottom: 1em;
+    }
+
+    .sair{
+        background-color: red;
+        font-size: 1em;
+        width: 5em;
+        height: 2em;
+        color: #fff;
+        border-radius: 0.5em;
+    }
+
+    .titulo{
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
     .t1{
         color: white;
-        display: flex;
-        align-self: center;
         font-size: 64px;
-        margin: 10em;
         font-family: 'Iceland';
     }
 
     .faixa2{
         display: flex ;
         flex-direction: row;
-        height: 19em;
-        width: 94em;
-        margin: 3em;
-        margin-top: 4em;
+        justify-content: space-around;
+        margin-bottom: 2em;
+        height: 50vh;
+        
     }
-    .textos{
-        display: flex ;
-        flex-direction: column;
-        margin-left: 5em;
 
+    .imgC{
+        width: 40%;
+        height: 85%;
     }
-    .t2{
-        margin-bottom: 1em;
+
+    .txtC{
+        width: 50%;
+        height: 85%;
+    }
+
+    .p1{
+        font-size: 1.5em;
+        margin-top: 0.3em;
         font-family: 'Iceland';
-        font-size: 36px;
-    }
 
-    .p2{
-        font-family: 'Iceland';
-        font-size: 30px;
-    }
-    .p3{
-        font-family: 'Iceland';
-        font-size: 30px;
-        text-align: justify;
-    }
-
-
-
-    .p4{
-        margin-top: 1em;
-        font-family: 'Iceland';
-        font-size: 32px;
     }
 
     .faixa3{
         display: flex ;
-        flex-direction: row;
-        height: 23em;
-        width: 94em;
-        margin: 1em;
-        margin-left: 3em;
-        margin-top: 17em;
-        background-color: #c4c4c4;
-        border-radius: 3em;
-        
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin-top: 2em;
     }
-    .textos2{
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: #c4c4c4;
+        width: 90%;
+        height: 35vh;
+        border-radius: 2em;
+        padding: 1em;
+        margin-bottom: 2em;
+        justify-content: space-between;
+    }
+
+    .card-meio{
+        display: flex;
+        flex-direction: row;
+        width: 99%;
+    }
+
+    .imagem{
+        width: 25%;
+        height: 100%;    
+        margin-right: 0.2em;
+    }
+
+    .textos{
         display: flex ;
         flex-direction: column;
-        justify-content: space-between;
-        margin-left: 1em;
-        margin-top: -2em;
+        width: 100%;
 
     }
-    .t3{
-        margin-top: 3em;
+    .t2{
+        font-size: 1.5em;
+        margin-bottom: 0.2em;
         font-family: 'Iceland';
-        font-size: 32px;
+
     }
 
-    .p5{
-        font-weight:100 ;
+    .p2{
+        font-size: 1.2em;
+        margin-top: 0.3em;
         font-family: 'Iceland';
-        font-size: 28px;
-        margin-top: 1em;
+
     }
 
-    .img2{
-        margin-top: 3em;
-        margin-left: 3em;
+    .b1{
+        display: flex;
+        background-color: black;
+        color: #fff;
+        border-radius: 2em;
+        font-size: 1em;
+        font-weight:700 ;
+    
     }
 
+ 
+
+   
     .hr{
         color: #9b9999;
     }
 
-    .faixa4{
-
-        display: flex ;
-        flex-direction: row;
-        height: 23em;
-        width: 94em;
-        margin: 1em;
-        margin-left: 3em;
-        margin-top: 3em;
-        background-color: #c4c4c4;
-        border-radius: 3em;
-
-        
-    }
-    .textos3{
-        display: flex ;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: 1em;
-        margin-top: -2em;
-
-    }
-    .t4{
-        margin-top: 3em;
-        font-family: 'Iceland';
-        font-size: 32px;
-    }
-
-    .p6{
-        font-weight:100 ;
-        font-family: 'Iceland';
-        font-size: 28px;
-        margin-top: 1em;
-    }
+  
+  
 
     
-    .img3{
-        margin-top: 3em;
-        margin-left: 3em;
-    }
-
-    .faixa5{
-        display: flex ;
-        flex-direction: row;
-        height: 23em;
-        width: 94em;
-        margin: 1em;
-        margin-left: 3em;
-        margin-top: 3em;
-        background-color: #c4c4c4;
-        border-radius: 3em;
-        
-    }
-    .textos4{
-        display: flex ;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-left: 1em;
-        margin-top: -2em;
-
-    }
-    .t5{
-        margin-top: 3em;
-        font-family: 'Iceland';
-        font-size: 32px;
-    }
-
-    .p7{
-        font-weight:100 ;
-        font-family: 'Iceland';
-        font-size: 28px;
-        margin-top: 1em;
-    }
-
-    .img4{
-        margin-top: 3em;
-        margin-left: 3em;
-    }
+    
 
     .botao1{
         background-color: black;
         color: #fff;
         border-radius: 2em;
-        height: 3em;
-        width: 15em;
-        font-weight:700 ;
-        font-size: 18px;
-        align-self: flex-start;
-        margin-left: 3.5em;
-        margin-top: 3em;
-        
+        font-size: 1em;
+        padding: 0.5em;
+        font-weight:500;
+        margin-left: 1em;
+
+        align-self: flex-start;   
     }
 
-    .b1{
-        background-color: black;
-        color: #fff;
-        border-radius: 2em;
-        height: 2em;
-        width: 17.5em;
-        font-weight:700 ;
-        font-size: 18px;
-        margin-top: 7em;
-        margin-left: 40em;
-    
-    }
-    .b2{
-        background-color: black;
-        color: #fff;
-        border-radius: 2em;
-        height: 2em;
-        width: 17.5em;
-        font-weight:700 ;
-        font-size: 18px;
-        margin-top: 6em;
-        margin-left: 40em;
-    
+    .botao1:active{
+        background-color: rgb(65, 65, 65);
     }
 
-    .b3{
-        background-color: black;
-        color: #fff;
-        border-radius: 2em;
-        height: 2em;
-        width: 17.5em;
-        font-weight:700 ;
-        font-size: 18px;
-        margin-top: 6em;
-        margin-left: 40em;
     
-    }
+
     .line{
-        margin-top: 6em;
-        margin-bottom: -7em;
         color: #000;
         border: 1px solid #000;
     }

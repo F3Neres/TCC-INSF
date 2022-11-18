@@ -4,8 +4,8 @@ import '../../common/index.scss'
 import { categoriaHome } from '../../../api/categoriaCliente.js'
 
 import { useEffect, useState } from 'react'
-
 import { useNavigate } from 'react-router-dom';
+
 import storage from 'local-storage';
 
 import { Link } from 'react-router-dom'
@@ -15,6 +15,8 @@ import lavagem from '../../../images/lavagens-servico.png'
 import higienizações from '../../../images/higienizacao-servico.png'
 import renovaçãopintura from '../../../images/renovacaopintura-servico.png'
 import recusar from '../../../images/xis.png'
+import { API_URL } from '../../../api/config.js';
+
 
 
 
@@ -30,18 +32,11 @@ import recusar from '../../../images/xis.png'
 export default function Index() {
 
     const [usuario, setUsuario] = useState('-');
-    const [categoria, setCategoria] = useState('-');
+    const [categoria, setCategoria] = useState([]);
 
+    const navigate = useNavigate();
 
-    async function listarC(){
-        const r = await categoriaHome();
-        setCategoria(r);
-    }
-
-
- 
-
-
+    
     useEffect(() => {
         if (!storage('usuario-logado')) {
             navigate('/home/inicio')
@@ -52,13 +47,40 @@ export default function Index() {
         }
     }, [])
 
-    const navigate = useNavigate();
 
     function sairClick() {
         storage.remove('usuario-logado')
         navigate('/home/inicio')
     }
 
+
+    function exibir(imagem) {
+        if (!imagem)
+            return `/produto-padrao.png`;
+        else 
+            return `${API_URL}/${imagem}`
+    }
+    
+    
+    
+    async function listarC(){
+        const r = await categoriaHome();
+        setCategoria(r);
+    }
+
+    useEffect(() => {
+        listarC();
+    },[]) 
+
+    function abrirDetalhes(id){
+        navigate('/descricao/' + id + '/cliente')
+    }
+
+
+
+
+
+   
 
     return (
 
@@ -85,31 +107,15 @@ export default function Index() {
 
             <section className='faixa-2'>
 
-                <div className='caixa'>
-                    <h1 className='t2'> Lavagens</h1>
-                    <img src={lavagem} alt="imagem" width="85%" height="75%" />
-                    
-                    <button className='b1'><Link to='/descricao/lavagens'> SAIBA MAIS  ➤</Link></button>                                                           
-                </div>
-
-                <div className='caixa'>
-                    <h1 className='t2'> Higienização Interna</h1>
-                    <img src={higienizações} alt="imagem" width="85%" height="75%" />
-                    
-                    <button className='b1'><Link to='/descricao/higienizacoes'> SAIBA MAIS </Link></button>
-                    
-                </div>
-
-                <div className='caixa'>
-                    <h1 className='t2'> Renovação de Pintura</h1>
-                    <img src={renovaçãopintura} alt="imagem" width="85%" height="75%" />
-                
-                    <button className='b1'><Link to='/descricao/renovacaopintura'> SAIBA MAIS </Link></button>  
-                  
-                </div>
-                
-
-                
+                {categoria.map(item => 
+                    <div className='caixa'>
+                        <h1 className='t2'> {item.categoria} </h1>
+                        <img src={exibir(item.imagem)} alt="" width="85%" height="75%" />
+                        
+                        <button className='b1' onClick={() => abrirDetalhes (item.id)}> SAIBA MAIS  ➤</button>                                                           
+                    </div>
+                )}
+             
 
                 
 

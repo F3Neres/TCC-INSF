@@ -23,7 +23,7 @@ import Principal from './pages/cliente/principal/index.js'
 //LadingPage
 import LadingPage from './pages/home/index.js'
 import Servico from './pages/servico/inicio/index.js'
-import Lavagem from './pages/servico/lavagem/index.js'
+import lavagens from './pages/servico/lavagem/index.js'
 import Higienizacao from './pages/servico/higienizacao/index.js'
 import Renovacaopintura from './pages/servico/renovacaopintura/index.js'
 import Inicio from './pages/inicio/index.js'
@@ -43,7 +43,7 @@ export const Rotas = () =>{
                 <Route path = '/Loginadmin' element={<LoginAdm />} />
                 <Route path = '/categoria' element={<Categoria />} />
                 <Route path = '/servico' element={<AdmServico />} />
-                <Route path = '/servico/lavagem' element={< Lavagem />} />
+                <Route path = '/categoria//cliente' element={< lavagens />} />
                 <Route path = '/servico/higienizacao' element={<Higienizacao />} />
                 <Route path = '/servico/renovacaopintura' element={<Renovacaopintura />} />
                 <Route path = '/consultar' element={<Consultar />} />
@@ -52,7 +52,7 @@ export const Rotas = () =>{
                 <Route path = '/login/cliente' element={<LoginCliente />} />
                 <Route path = '/cadastro' element={<Cadastro/>} />
                 <Route path = '/descricao/higienizacoes' element={<Descricao1 />} />
-                <Route path = '/descricao/lavagens' element={<Descricao2 />} />
+                <Route path = '/descricao/:id/cliente' element={<Descricao2 />} />
                 <Route path = '/descricao/renovacaopintura' element={<Descricao3 />} />
                 <Route path = '/cliente/pagamento' element={<Pagamento />} />
                 <Route path = '/cliente/pedido' element={<Pedido/>} />
