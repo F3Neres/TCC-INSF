@@ -1,5 +1,5 @@
 
-import { imagemServico, inserirServico, listarServico, listarServicoCategoria, listarServicoNome, listarServicoValor, removerServico } from "../repository/servicoRepository.js";
+import { imagemServico, inserirServico, listarServico, listarServicoCategoria, listarServicoNome, listarServicoValor, removerServico } from "../../repository/admin/servicoRepository.js";
 
 import multer from 'multer'
 

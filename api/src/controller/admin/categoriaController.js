@@ -1,5 +1,5 @@
 
-import { imagemCategoria, inserirCategoria, listarCategoria, removerCategoria } from "../repository/categoriaRepository.js";
+import { imagemCategoria, inserirCategoria, listarCategoria, removerCategoria } from "../../repository/admin/categoriaRepository.js";
 
 import multer from 'multer'
 

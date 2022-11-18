@@ -34,8 +34,6 @@ export default function Index() {
 
             storage('usuario-logado', r);
 
-            alert('Usuario logado')
-
             setTimeout(() => {
                 navigate('/cliente/principal');
             }, 1500);

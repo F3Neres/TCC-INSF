@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { cadastrarCliente, cadastrarLogin, clienteLogin } from "../repository/loginCliente.js";
+import { cadastrarCliente, cadastrarLogin, clienteLogin } from "../../repository/cliente/loginCliente.js";
 const server = Router();
 
 
@@ -15,7 +15,8 @@ server.post('/cliente/login', async (req,resp) => {
 
         resp.send({
             id: r.id,
-            nome: r.nome
+            nome: r.nome,
+            apelido: r.apelido
         })
 
     } catch (err) {

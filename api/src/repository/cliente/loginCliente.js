@@ -1,9 +1,10 @@
-import { con } from "./connection.js";
+import { con } from "../connection.js";
 
 export async function clienteLogin(email, senha){
     const comando = `
     select tb_usuario.id_usuario		id,
-            nm_usuario					nome
+            nm_usuario					nome,
+            nm_apelido                  apelido
         from tb_usuario
         inner join tb_login_usuario on tb_login_usuario.id_usuario = tb_usuario.id_usuario
         where ds_email = ?

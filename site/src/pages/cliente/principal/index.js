@@ -1,10 +1,21 @@
 import './index.scss';
 import '../../common/index.scss'
+
+import { categoriaHome } from '../../../api/categoriaCliente.js'
+
+import { useEffect, useState } from 'react'
+
+import { useNavigate } from 'react-router-dom';
+import storage from 'local-storage';
+
 import { Link } from 'react-router-dom'
+
+
 import lavagem from '../../../images/lavagens-servico.png'
 import higienizações from '../../../images/higienizacao-servico.png'
 import renovaçãopintura from '../../../images/renovacaopintura-servico.png'
 import recusar from '../../../images/xis.png'
+
 
 
 //IMPORTAÇÃO DE FONTE
@@ -18,6 +29,37 @@ import recusar from '../../../images/xis.png'
 
 export default function Index() {
 
+    const [usuario, setUsuario] = useState('-');
+    const [categoria, setCategoria] = useState('-');
+
+
+    async function listarC(){
+        const r = await categoriaHome();
+        setCategoria(r);
+    }
+
+
+ 
+
+
+    useEffect(() => {
+        if (!storage('usuario-logado')) {
+            navigate('/home/inicio')
+        }
+        else{
+            const usuarioLogado = storage('usuario-logado');
+            setUsuario(usuarioLogado.apelido);
+        }
+    }, [])
+
+    const navigate = useNavigate();
+
+    function sairClick() {
+        storage.remove('usuario-logado')
+        navigate('/home/inicio')
+    }
+
+
     return (
 
         
@@ -29,8 +71,15 @@ export default function Index() {
 
             <section class='faixa1'>
 
-                <h1 class='t1'> AGENDAMENTO DE SERVIÇOS </h1>
+                <div className='user'>            
+                    <h3 className='nome'>Bem vindo(a) 
+                    {usuario}</h3>
+                    <button className='sair' onClick={sairClick}>Sair</button>
+                </div>
 
+                <div className='titulo'>
+                    <h1 class='t1'> AGENDAMENTO DE SERVIÇOS </h1>
+                </div>
             </section>
 
 

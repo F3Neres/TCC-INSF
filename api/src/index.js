@@ -1,12 +1,15 @@
 import 'dotenv/config'
 
-import adminController from './controller/adminController.js'
-import categoriaController from './controller/categoriaController.js'
-import servicoController from './controller/servicoController.js'
+import adminController from './controller/admin/adminController.js'
+import categoriaController from './controller/admin/categoriaController.js'
+import servicoController from './controller/admin/servicoController.js'
 
-import loginCliente from './controller/loginCliente.js'
-import cadastrarCliente from './controller/loginCliente.js'
-import cadastrarLogin from './controller/loginCliente.js'
+import loginCliente from './controller/cliente/loginCliente.js'
+import cadastrarCliente from './controller/cliente/loginCliente.js'
+import cadastrarLogin from './controller/cliente/loginCliente.js'
+
+import listarCategoria from './controller/cliente/listarCategoria.js'
+
 
 import express from 'express'
 import cors from 'cors'
@@ -29,6 +32,8 @@ server.use(servicoController);
 server.use(loginCliente);
 server.use(cadastrarCliente);
 server.use(cadastrarLogin);
+
+server.use(listarCategoria);
 
 
 
