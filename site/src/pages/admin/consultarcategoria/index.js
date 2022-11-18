@@ -5,45 +5,31 @@ import Lateral from '../../../componets/lateral/index.js'
 
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { listarCategoria, removerCategoria, buscarServicoNome, buscarCategoriaNome, buscarCategoriaValor } from '../../../api/listarServico.js';
+import { listarCategoria, removerCategoria, buscarCategoriaNome } from '../../../api/listarServico.js';
 
 
 
 export default function Index() {
 
     const [categorias, setCategorias] = useState([]);
-    const [servicos, setServicos] = useState([]);
-    const [filtroServico, setFiltroServico] = useState('');
     const [filtroCategoria, setFiltroCategoria] = useState('');
-    const [filtroValor, setFiltroValor] = useState( );
+    const [erro, setErro] = useState('');
+  
 
     async function carregarCategorias(){
         const r = await listarCategoria();
         setCategorias(r);
     }
 
-    async function nomeServico() {
-        const resp = await buscarServicoNome(filtroServico);
-        setServicos(resp);
-    }
 
     async function nomeCategoria() {
         const resp = await buscarCategoriaNome (filtroCategoria);
-        setServicos(resp);
+        setCategorias(resp);
     }
 
-    async function lisarValor() {
-        const resp = await buscarCategoriaValor (filtroValor);
-        setServicos(resp);
-    }
+   
 
 
-
-    useEffect(() => {
-        setTimeout(()=>{
-            nomeServico()
-        },100)
-    },[filtroServico]);
 
     useEffect(() => {
         setTimeout(()=>{
@@ -51,25 +37,27 @@ export default function Index() {
         },100)
     },[filtroCategoria]);
 
-    useEffect(() => {
-        setTimeout(()=>{
-            lisarValor()
-        },100)
-    },[filtroValor]);
-
 
     useEffect(() => {
         carregarCategorias();
     }, []);
 
+
+
     async function deletarCategoria(id){
+        ref.current.continuousStart()
         try {
             await removerCategoria(id);
             carregarCategorias();
             alert('Categoria removido');
 
-        } catch (err) {
-            alert(err.message);
+        } catch(err){
+            ref.current.complete();
+            setCarregando(false);
+
+            if (err.response.status === 401) {
+                setErro(err.response.data.erro);
+            }
         }
     }
 
@@ -77,6 +65,7 @@ export default function Index() {
     return(
 
         <main className='consultar'>
+            <LoadingBar color='#ff0000' ref={ ref }/>
 
             <Lateral />
 
@@ -89,18 +78,11 @@ export default function Index() {
             <div className='meio'>
 
                 <table className='tabela1'>
-                    <tr className='linha1'>
-                        <td>Serviço:</td>
-                        <td><input type = "text" value={filtroServico} onChange={e => setFiltroServico(e.target.value)} /></td>
-                    </tr>
                     <tr className='linha2'>
                         <td> Categoria:</td>
                         <td><input type = "text" value={filtroCategoria} onChange={e => setFiltroCategoria(e.target.value)} /></td>
                     </tr>
-                    <tr className='linha3'>
-                        <td> Valor:</td>
-                        <td><input type = "number" value={filtroValor} onChange={e => setFiltroValor(e.target.value)} /></td>
-                    </tr>
+
                 </table>
 
 
@@ -110,9 +92,7 @@ export default function Index() {
                         <tr className='linha4'>
                             <td className='id'> ID </td>
                             <td> Categoria </td>
-                            <td> Serviço </td>
-                            <td> Valor </td>
-                            <td></td>
+
                         </tr>
                     </thead>
 
@@ -121,8 +101,6 @@ export default function Index() {
                         <tr>
                             <td>{item.id}</td>
                             <td>{item.categoria}</td>
-                            <td>{item.servico}</td>
-                            <td>R${item.valor}</td>
                             <td><button onClick={() => deletarCategoria(item.id)}>X</button></td>
                         </tr>
                     )}
