@@ -21,7 +21,7 @@ export default function Index() {
     return (
 
         
-        <main className='page-lavagem'>
+        <main className='page'>
             
             <Link rel="preconnect" href="https://fonts.googleapis.com"></Link>
             <Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></Link>

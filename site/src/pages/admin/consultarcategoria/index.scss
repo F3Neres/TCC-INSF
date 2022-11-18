@@ -1,4 +1,4 @@
-.consultar{
+.consultar-categoria{
 
     display: flex;
     flex-direction: row;
@@ -41,10 +41,10 @@
 
     .tabela1{
         background-color: #EDEDED;
-        height: 20vh;
-        margin-top: 1em;
+        height: 5vh;
+        margin-top: 5em;
         margin-left: 2em;
-        margin-bottom: 2em;
+        margin-bottom: 7em;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -91,7 +91,6 @@
         width: 99%;
         margin-left: 10px;
         margin-top: 10px;
-       
     }
 
 

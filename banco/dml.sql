@@ -19,13 +19,13 @@ select  id_login_usuario     id,
         nm_usuario           nome,
         ds_email             email
 from    tb_login_usuario
-where   ds_email            = email,
+where   ds_email            = email
   and   ds_senha            =  senha;
 
 
 -- CSU03:: cadastrar novo cliente
 INSERT INTO tb_usuario (id_usuario, nm_usuario, ds_cpf , ds_telefone, nm_apelido)
-     VALUES             (1, 'felipe', '111.222.333-00', 11 98888-7777, 'felipe');
+     VALUES             (1, 'felipe', '111.222.333-00', '11 98888-7777', 'felipe');
 
 
 
@@ -41,7 +41,7 @@ WHERE id_categoria = 1;
 -- CSU04.2:: listar categoria
 SELECT id_categoria         as id,
        nm_categoria         as categoria
-  FROM tb_categoria
+  FROM tb_categoria;
 
 -- CSU05:: cadastrar serviço
 INSERT INTO tb_servico (id_categoria, nm_servico, ds_descricao, nr_valor )
@@ -66,7 +66,7 @@ select id_servico        as id,
             by tb_produto.id_produto,
                 nm_categoria ,
                 nm_servico,
-                nr_valor
+                nr_valor;
 
 
 

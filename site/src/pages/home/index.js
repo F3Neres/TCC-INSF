@@ -1,6 +1,8 @@
 import './index.scss';
 import '../common/index.scss'
+
 import { Link } from 'react-router-dom'
+
 import combo1 from '../../images/img-combo1.png'
 import combo2 from '../../images/img-combo2.png'
 import combo3 from '../../images/img-combo3.png'
@@ -10,7 +12,7 @@ import cuidados2 from '../../images/img-cuidadosextras.png'
 
 import cuidados3 from '../../images/img-cuidadosinternos.png'
 import somos from '../../images/img-quemsomos.png'
-import logo from '../../images/logo.png'
+
 
 import Cabecalho from '../../componets/cabecalho/index.js'
 
@@ -36,7 +38,7 @@ export default function Index() {
                 <div className='BOTOES'>   
                     <div>
                         <button className='b1'> A GORILACARDETAIL</button>
-                        <button className='b1'> LOCALIZAÇÃO</button>
+                        <Link to='/home/contato'>  <button className='b1'> LOCALIZAÇÃO</button>  </Link>      
                     </div>
                 </div>
 
@@ -50,7 +52,7 @@ export default function Index() {
                 </div>
 
                 <div className='BOTAO'>   
-                        <button className='b2'>contato</button>                
+                <Link to='/home/contato'> <button className='b2'>contato</button>   </Link>                
                 </div>    
             
 

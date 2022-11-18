@@ -3,7 +3,7 @@
 
 //import storage from 'local-storage'
 //import LoadingBar from 'react-top-loading-bar'
-import { useState, useRef, useEffect } from 'react'
+import { useEffect } from 'react'
 
 import storage from 'local-storage'
 

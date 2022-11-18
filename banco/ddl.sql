@@ -31,8 +31,6 @@ create table tb_login_usuario(
     foreign key (id_usuario) references tb_usuario(id_usuario)
 );
 
-INSERT INTO tb_login_usuario (id_usuario, ds_email, ds_senha )
-                VALUES (2, "mari@gmail.com", "1234");
 
 create table tb_categoria(
 	id_categoria			int primary key auto_increment,

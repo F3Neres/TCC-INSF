@@ -61,7 +61,7 @@ export default function Index() {
 
     return(
 
-        <main className='consultar'>
+        <main className='consultar-categoria'>
 
 
             <Lateral />
