@@ -55,7 +55,7 @@ foreign key (id_categoria)  references tb_categoria(id_categoria)
 create table tb_pedido(
 	id_pedido				int primary key auto_increment,
     id_usuario				int,
-    dt_data					datetime,
+    dt_data					varchar(100),
     ds_hora					varchar(100),
     tb_pagamento			varchar(100),
     ds_status				varchar(100),

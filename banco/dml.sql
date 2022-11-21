@@ -80,8 +80,19 @@ table tb_adm;
 
 table tb_servico;
 
-select * from tb_usuario;
-select * from tb_login_usuario;
+select * from tb_pedido;
+select * from tb_servico_item;
+select * from tb_pagamento_cartao;
+
+
+ INSERT INTO tb_pagamento_cartao(
+                id_pedido,
+                nm_pessoa,
+                nr_cartao,
+                dt_validade,
+                cod_seguranca
+            )
+            VALUES (?, ?, ?, ?, ?);
 
 select md5('123');
 
