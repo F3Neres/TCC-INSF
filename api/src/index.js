@@ -10,6 +10,8 @@ import cadastrarLogin from './controller/cliente/loginCliente.js'
 
 import listarCategoria from './controller/cliente/listarCategoria.js'
 
+import PedidoController from './controller/cliente/PedidoController.js'
+
 
 import express from 'express'
 import cors from 'cors'
@@ -34,6 +36,7 @@ server.use(cadastrarCliente);
 server.use(cadastrarLogin);
 
 server.use(listarCategoria);
+server.use(PedidoController);
 
 
 

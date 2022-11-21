@@ -8,26 +8,13 @@ import { useNavigate } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 
 import storage from 'local-storage';
-
-import lavagem from '../../../../images/lavagens-servico.png'
-import lavagens from '../../../../images/img-lavagens.png'
-import lavagens2 from '../../../../images/img-lavagens2.png'
-import lavagens3 from '../../../../images/img-lavagens3.png'
-import { buscarCategoriaPorId, servicoPorIdCategoria } from '../../../../api/categoriaCliente.js';
 import { API_URL } from '../../../../api/config.js';
 
-
-
-//IMPORTAÇÃO DE FONTE
-//site: https://fonts.google.com/
-//<Link rel="preconnect" href="https://fonts.googleapis.com"></Link>
-//<Link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></Link>
-//<Link href="https://fonts.googleapis.com/css2?family=Iceland&display=swap" rel="stylesheet"></Link>
+import { buscarCategoriaPorId, servicoPorIdCategoria, ComprarServico } from '../../../../api/categoriaCliente.js';
 
 
 
-
-export default function Index() {
+export default function Index(){
 
     const [usuario, setUsuario] = useState('-');
     const navigate = useNavigate();
@@ -48,8 +35,10 @@ export default function Index() {
         navigate('/home/inicio')
     }
 
-    const [categoria, setCategoria] = useState({info: {}});
-    const [servico, setServico] = useState([])
+
+
+    const [servico, setServico] = useState({info: {}});
+    const [categoria, setCategoria] = useState([])
 
     const { id } = useParams();
 
@@ -60,9 +49,9 @@ export default function Index() {
     }
 
     async function carregarServico(){
-        const r = await servicoPorIdCategoria(id)
+        const r = await ComprarServico(id)
         setServico(r)
-
+        
     }
 
 
@@ -70,29 +59,39 @@ export default function Index() {
         carregarPagina();
         carregarServico();
         console.log(servico)
+
     }, [])
 
     function exibir(imagem) {
         if (!imagem)
-            return `{lavagem}`;
+            return `/higienizacaocompleta.jpg`;
         else 
             return `${API_URL}/${imagem}`
     }
 
-       
-    function abrirDetalhes(idS){
-        navigate('/descricao/' + idS + '/servico')
-        
+ 
+
+    function adicionarCarrinho(){
+        let carrinho = []
+        if (storage('carrinho')){
+            carrinho = storage('carrinho')
+        }
+        if(!carrinho.find(item => item.id === id)){
+            carrinho.push({
+                id: id,
+                qtd: 1
+            })
+            storage ('carrinho', carrinho)
+        }
+        alert('Serviço adicionado ao carrinho')        
     }
 
 
 
 
-    return (
+    return(
 
-        
-        <main className='page-lavagem'>
-            
+        <main className='desc'>
 
             <section class='faixa1'>
 
@@ -102,56 +101,42 @@ export default function Index() {
                 </div>
 
                 <div className='titulo'>
-                    <h1 class='t1'> {categoria.info.categoria}  </h1>
+                    <h1 class='t1'> Adione o serviço ao carrinho </h1>
                 </div>
 
             </section>
 
 
-            <section className='faixa2'>
-
-                <div className='imgC'>
-
-                    <img src={exibir(categoria.info.imagem)} alt="imagem" width="99%" height="99%" />
-
-                </div>
-
-                <div className='txtC'>
-
-
-                    <p className='p1'> {categoria.info.descricao}</p>
-
-                </div>
-
-
-            </section>
-
-
-
-            <hr className='line'/>
+            
 
             <section class='faixa3'>
 
-                {servico.map(item =>
+                
                 <div className='card'>
                     <div className='card-meio' >
                         <div className='imagem'> 
-                            <img src={exibir(item.imagem)} alt="imagem" width="99%" height="99%" />
+                            <img src={exibir(servico.info.imagem)} alt="imagem" width="99%" height="99%" />
                         </div>
                         
                         <div className='textos'>
-                            <h1 className='t2'>{item.servico}</h1>
+                            <h1 className='t2'>{servico.info.servico}</h1>
                             
                             <hr className='line'/>
 
-                            <p className='p2'>{item.descricao}</p>
+                            <p className='p2'>{servico.info.descricao}</p>
+
+                           
                                         
                         </div>
                     </div>
 
-                     <button className='b1' onClick={() => abrirDetalhes (item.id)}> Adicionar ao carrinho </button>
+                    <p className='p2'>R$ {servico.info.valor}</p>
+
+                     <button className='b1' onClick={adicionarCarrinho}> Adicionar Serviço </button>
                 </div>
-                )}
+
+                <hr className='line'/>
+            
 
 
             </section>
@@ -160,12 +145,8 @@ export default function Index() {
 
             <Link to='/cliente/principal'> <button className='botao1'> Voltar Para Página Principal</button> </Link>
 
-            <br />
+            
             
         </main>
-
-
     )
-
-
 }

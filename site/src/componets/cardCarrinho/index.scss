@@ -1,0 +1,23 @@
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+    border-radius: 2em;
+    width: 90%;
+    padding: 1em;
+    color: black;
+    margin: 2em;
+
+    .head-card{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .xis{
+        opacity: 75%;
+        cursor: pointer;
+    }
+
+}
+

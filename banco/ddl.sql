@@ -32,6 +32,7 @@ create table tb_login_usuario(
 );
 
 
+
 create table tb_categoria(
 	id_categoria			int primary key auto_increment,
     nm_categoria			varchar(200),
@@ -49,28 +50,26 @@ create table tb_servico(
 foreign key (id_categoria)  references tb_categoria(id_categoria)
 );
 
-create table tb_servico_item(
-	id_servico_item			int primary key auto_increment,
-    id_servico				int,
-foreign key (id_servico)    references tb_servico(id_servico)
-);
 
-create table tb_agenda(
-	id_agenda				int primary key auto_increment,
-	dt_data					datetime,
-    ds_hora					varchar(50)
-);
 
 create table tb_pedido(
 	id_pedido				int primary key auto_increment,
     id_usuario				int,
-    id_servico_item			int,
-    id_agenda				int,
+    dt_data					datetime,
+    ds_hora					varchar(100),
     tb_pagamento			varchar(100),
     ds_status				varchar(100),
-foreign key (id_usuario) references tb_usuario(id_usuario),
-foreign key (id_servico_item) references tb_servico_item(id_servico_item),
-foreign key (id_agenda) references tb_agenda(id_agenda)
+foreign key (id_usuario) references tb_usuario(id_usuario)
+);
+
+create table tb_servico_item(
+	id_servico_item			int primary key auto_increment,
+    id_pedido				int,
+    id_servico				int,
+    qtd_itens				int,
+    vl_servico				decimal(15,2),
+foreign key (id_pedido) 	references tb_pedido(id_pedido),
+foreign key (id_servico)    references tb_servico(id_servico)
 );
 
 create table tb_pagamento_cartao(

@@ -1,0 +1,178 @@
+.desc{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    
+    .faixa1{
+        display: flex ;
+        flex-direction: column;
+        background-color: black;
+        height: 15em;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2em;
+
+    }
+
+    .user{
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 1em;
+        padding-left: 1em;
+    }
+
+    .nome{
+        color: #fff;
+        margin-bottom: 1em;
+    }
+
+    .sair{
+        background-color: red;
+        font-size: 1em;
+        width: 5em;
+        height: 2em;
+        color: #fff;
+        border-radius: 0.5em;
+    }
+
+    .titulo{
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+
+    .t1{
+        color: white;
+        font-size: 64px;
+        font-family: 'Iceland';
+    }
+
+    .faixa2{
+        display: flex ;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 2em;
+        height: 50vh;
+        
+    }
+
+    .imgC{
+        width: 40%;
+        height: 85%;
+    }
+
+    .txtC{
+        width: 50%;
+        height: 85%;
+    }
+
+    .p1{
+        font-size: 1.5em;
+        margin-top: 0.3em;
+        font-family: 'Iceland';
+
+    }
+
+    .faixa3{
+        display: flex ;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin-top: 2em;
+    }
+
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: #c4c4c4;
+        width: 90%;
+        height: 35vh;
+        border-radius: 2em;
+        padding: 1em;
+        margin-bottom: 2em;
+        justify-content: space-between;
+    }
+
+    .card-meio{
+        display: flex;
+        flex-direction: row;
+        width: 99%;
+    }
+
+    .imagem{
+        width: 25%;
+        height: 100%;    
+        margin-right: 0.2em;
+    }
+
+    .textos{
+        display: flex ;
+        flex-direction: column;
+        width: 100%;
+
+    }
+    .t2{
+        font-size: 1.5em;
+        margin-bottom: 0.2em;
+        font-family: 'Iceland';
+
+    }
+
+    .p2{
+        font-size: 1.2em;
+        margin-top: 0.3em;
+        font-family: 'Iceland';
+
+    }
+
+    .b1{
+        display: flex;
+        background-color: black;
+        color: #fff;
+        border-radius: 2em;
+        font-size: 1em;
+        font-weight:700 ;
+    
+    }
+
+ 
+
+   
+    .hr{
+        color: #9b9999;
+    }
+
+  
+  
+
+    
+    
+
+    .botao1{
+        background-color: black;
+        color: #fff;
+        border-radius: 2em;
+        font-size: 1em;
+        padding: 0.5em;
+        font-weight:500;
+        margin-left: 1em;
+
+        align-self: flex-start;   
+    }
+
+    .botao1:active{
+        background-color: rgb(65, 65, 65);
+    }
+
+    
+
+    .line{
+        color: #000;
+        border: 1px solid #000;
+    }
+    
+}

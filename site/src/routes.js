@@ -17,6 +17,8 @@ import Descricao3 from './pages/cliente/descricao/renovacaopintura/index.js'
 import Pagamento from './pages/cliente/pagamento/index.js'
 import Pedido from './pages/cliente/pedido/index.js'
 import Principal from './pages/cliente/principal/index.js'
+import DescServico  from './pages/cliente/descricao/descservico/index.js'
+
 
 
 
@@ -53,6 +55,7 @@ export const Rotas = () =>{
                 <Route path = '/cadastro' element={<Cadastro/>} />
                 <Route path = '/descricao/higienizacoes' element={<Descricao1 />} />
                 <Route path = '/descricao/:id/cliente' element={<Descricao2 />} />
+                <Route path = '/descricao/:id/servico' element={<DescServico />} />
                 <Route path = '/descricao/renovacaopintura' element={<Descricao3 />} />
                 <Route path = '/cliente/pagamento' element={<Pagamento />} />
                 <Route path = '/cliente/pedido' element={<Pedido/>} />

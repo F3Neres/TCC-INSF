@@ -1,7 +1,7 @@
 import './index.scss';
 import '../../common/index.scss'
 
-import { categoriaHome } from '../../../api/categoriaCliente.js'
+import { categoriaHome, ComprarServico } from '../../../api/categoriaCliente.js'
 
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
@@ -10,10 +10,13 @@ import storage from 'local-storage';
 
 import { Link } from 'react-router-dom'
 
+import Carrinho from '../../../componets/cardCarrinho';
+
 
 import lavagem from '../../../images/lavagens-servico.png'
 import higienizações from '../../../images/higienizacao-servico.png'
 import renovaçãopintura from '../../../images/renovacaopintura-servico.png'
+import padrao from '../../../images/higienizacaocompleta.jpg'
 import recusar from '../../../images/xis.png'
 import { API_URL } from '../../../api/config.js';
 
@@ -56,7 +59,7 @@ export default function Index() {
 
     function exibir(imagem) {
         if (!imagem)
-            return `/produto-padrao.png`;
+            return `/higienizacaocompleta.jpg`;
         else 
             return `${API_URL}/${imagem}`
     }
@@ -68,16 +71,62 @@ export default function Index() {
         setCategoria(r);
     }
 
-    useEffect(() => {
-        listarC();
-    },[]) 
+    
 
     function abrirDetalhes(id){
         navigate('/descricao/' + id + '/cliente')
     }
 
 
+    const[itens, setItens] = useState([]);
 
+    function calcularValor (){
+        let total = 0 ;
+        for (let item of itens){
+            total = total + item.servico.info.valor * item.qtd;
+        }
+        return total
+    }
+
+
+
+
+    function removerItem(id){
+        console.log('aquii'+id)
+        let carrinho = storage('carrinho');
+        carrinho = carrinho.filter(item => item.id != id);
+
+        storage('carrinho', carrinho);
+        carregarCarrinho();
+        alert('Servico removido')
+    }
+
+
+    async function carregarCarrinho(){
+        let carrinho = storage('carrinho');
+        if(carrinho){          
+
+            let temp = [];
+
+            for (let servico of carrinho){
+              let p = await ComprarServico(servico.id);
+
+              temp.push({
+                servico: p,
+                qtd: servico.qtd
+              })
+            }
+            setItens(temp);
+        }
+        
+        
+    }
+
+
+    useEffect(() => {
+        listarC();
+        carregarCarrinho();
+    },[]) 
 
 
    
@@ -102,6 +151,8 @@ export default function Index() {
                 <div className='titulo'>
                     <h1 class='t1'> AGENDAMENTO DE SERVIÇOS </h1>
                 </div>
+        
+
             </section>
 
 
@@ -126,44 +177,13 @@ export default function Index() {
             <section className='faixa-3'> 
 
                 <h1 className='t5'> SERVIÇOS ADICIONADOS </h1>
+                <h2>Total</h2>
+                <h3>R$ {calcularValor()}</h3>
 
                 
-
-                <div className='card'>  
-
-                    <div className='head-card'>
-
-                        <h3>Serviço</h3>
-                        <h3>Valor</h3>
-                        <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
-
-                    </div>
-                    
-                </div>
-
-                <div className='card'>  
-
-                    <div className='head-card'>
-
-                        <h3>Serviço</h3>
-                        <h3>Valor</h3>
-                        <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
-
-                    </div>
-                    
-                </div>
-
-                <div className='card'>  
-
-                    <div className='head-card'>
-
-                        <h3>Serviço</h3>
-                        <h3>Valor</h3>
-                        <img className='xis' src={recusar} alt="imagem" width="40px" height="40px" />
-
-                    </div>
-                    
-                </div>
+                {itens.map(item => 
+                    <Carrinho item={item} removerItem={removerItem} />
+                )}          
 
                 <div className='botoes'>
                     <Link to='/cliente/pedido'> <button className='b4'>ACOMPANHAR PEDIDO </button> </Link>

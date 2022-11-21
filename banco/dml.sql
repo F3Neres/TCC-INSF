@@ -74,9 +74,11 @@ select id_servico        as id,
 -- drop database gorilaDB;
 
 
+-- drop database gorilaDB;
+
 table tb_adm;
 
-table tb_categoria;
+table tb_servico;
 
 select * from tb_usuario;
 select * from tb_login_usuario;
@@ -181,3 +183,19 @@ select tb_usuario.id_usuario		id,
                 nr_valor;
           
           
+	select      id_categoria         as id,
+                nm_categoria         as categoria,
+                img_categoria        as imagem,
+                ds_descricao         as descricao
+
+        from tb_categoria
+        where id_categoria = 1 ;
+        
+        SELECT id_servico         as id,
+			id_categoria		as idCateforia,
+            nm_servico        	as servico,
+            ds_descricao		as descricao,
+            nr_valor          	as valor       
+        FROM tb_servico
+
+        WHERE id_categoria        like 1;

@@ -1,4 +1,4 @@
-import { categoriaHome, CategoriaId, ServicoPorCategoria } from "../../repository/cliente/listarCategoria.js";
+import { categoriaHome, CategoriaId, ComprarServico, ServicoPorCategoria } from "../../repository/cliente/listarCategoria.js";
 
 import { Router } from "express";
 const server = Router();
@@ -43,6 +43,24 @@ server.get('/categoria/servico/:id', async (req, resp) => {
 
 
     } catch (err) {
+        resp.status(400).send({
+            erro: err.message
+        })
+    }
+})
+
+
+server.get('/compra/servico/:id', async (req, resp) => {
+    try {
+        const id = req.params.id;
+        const servico = await ComprarServico(id);
+
+        resp.send({
+            info: servico,
+
+        })
+    }
+    catch (err) {
         resp.status(400).send({
             erro: err.message
         })

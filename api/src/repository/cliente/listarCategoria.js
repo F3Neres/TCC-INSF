@@ -29,10 +29,10 @@ export async function CategoriaId(id){
 }
 
 
-export async function ServicoPorCategoria(idS){
+export async function ServicoPorCategoria(id){
         const comando = `
-        SELECT          id_servico              as idS,
-			id_categoria		as idCateforia,
+        SELECT          id_servico              as id,
+			id_categoria		as idCategoria,
                         nm_servico        	as servico,
                         img_servico             as imagem,
                          ds_descricao		as descricao,
@@ -41,6 +41,22 @@ export async function ServicoPorCategoria(idS){
 
         WHERE id_categoria        like ?;
         `
-        const [linhas] = await con.query(comando, [idS]);
+        const [linhas] = await con.query(comando, [id]);
         return linhas;
+}
+
+export async function ComprarServico(id){
+        const comando = `
+        SELECT          id_servico              as id,
+			id_categoria		as idCategoria,
+                        nm_servico        	as servico,
+                        img_servico             as imagem,
+                         ds_descricao		as descricao,
+                        nr_valor          	as valor       
+        FROM tb_servico
+
+        WHERE id_servico       like ?;
+        `
+        const [linhas] = await con.query(comando, [id]);
+        return linhas[0];
 }

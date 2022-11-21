@@ -22,3 +22,10 @@ export async function servicoPorIdCategoria(id){
     const r = await api.get('/categoria/servico/' + id);
     return r.data
 }
+
+
+export async function ComprarServico(id){
+    const r = await api.get('/compra/servico/' + id);
+    return r.data
+}
+
